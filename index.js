@@ -8,6 +8,16 @@ app.use(express.static("public"));
 // morgan middleware to log all requests
 app.use(morgan("common"));
 
+// movies
+let movies = [
+    {
+        Title: "Star Wars: Episode I - The Phantom Menace",
+        Description:
+        "Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory.",
+        Director: "George Lucas"
+    },
+];
+
 // GET requests
 app.get("/", (req, res) => {
     res.send("Welcome to StarFlix!");
@@ -15,6 +25,10 @@ app.get("/", (req, res) => {
 
 app.get("/movies", (req, res) => {
     res.json(movies);
+});
+
+app.get("/documentation", (req, res) => {
+    res.sendFile("public/documentation.html", { root: __dirname });
 });
 
 // error handling middleware
