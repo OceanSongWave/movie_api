@@ -1,0 +1,21 @@
+body {
+    background-color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+td, th {
+    border: 1px solid #909293;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #e3e4e5;
+}

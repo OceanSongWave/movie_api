@@ -4,17 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"
 </head>
 <body>
     <h1>StarFlix Documentation</h1>
     <br>
-    <br>
     <h2>Objective</h2>
-    <br>
     <h3>To build the server-side component of a “movies” web application.
     </h3> 
-    <h4>The web application will provide users with access   to information about different movies, directors, and genres. Users will be able to sign up, update their
-    personal information, and create a list of their favorite movies.
-    </h4>   
+    <h4>The web application will provide users with access to information about different movies, directors, and genres. Users will be able to sign up, update their personal information, and create a list of their favorite movies.
+    </h4>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>Business Logic</th>
+            <th>URL</th>
+            <th>HTTP Method</th>
+            <th>Request Body</th>
+            <th>Request Example</th>
+            <th>Response Body</th>
+            <th>Response Example</th>
+        </tr>
+        <tr>
+            <td>Return a list of ALL movies</td>
+            <td>/movies</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>/movies</td>
+            <td>A JSON object holding data about all the movies.</td>
+            <td>
+                {
+                    "id": 1,
+                    "Title": "Star Wars: Episode IV - A New Hope",
+                }
+                <br>
+                <br>
+                {
+                    "id": 2,
+                    "Title": "Fight Club",
+                }
+                <br>
+                <br>
+                {
+                    "id": 3,
+                    "Title": "Inception",
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Return data about a single movie by title</td>
+            <td>/movies/:Title</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>/movies/Inception</td>
+            <td>A JSON object holding data about a single movie, containing description, genre, director, image URL, featured or not</td>
+            <td>
+                {
+                    "id": 3,
+                    "Title": "Inception",
+                    "Description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+                    "Genre": {
+                        "Name": "Action",
+                        "Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases."
+                    },
+                    "Director": {
+                        "Name": "Christopher Nolan",
+                        "Bio": "Christopher Edward Nolan is a British-American film director, producer, and screenwriter. His directorial efforts have grossed more than US$5.1 billion worldwide, garnered 34 Oscar nominations and ten wins. ",
+                        "Birth": "1970",
+                        "Death": "n/a"
+                    },
+                    "ImagePath": "https://www.imdb.com/title/tt1375666/mediaviewer/rm3426651392?ref_=tt_ov_i",
+                    "Featured": true
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Return data about a genre by name</td>
+            <td>/movies/genres/:Name</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>/movies/genres/Action</td>
+            <td>A JSON object holding data about a genre and its description</td>
+            <td>
+                "Genre": {
+                    "Name": "Action",
+                    "Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases."
+                },
+            </td>
+        </tr>
+        <tr>
+            <td>Return data about a director</td>
+            <td>/movies/director/:Name</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>/movies/director/George%20Lucas</td>
+            <td>A JSON object holding data about a director, containing bio, birth year, death year</td>
+            <td>
+                "Director": {
+                    "Name": "George Lucas",
+                    "Bio": "George Walton Lucas Jr. is an American film director, producer, screenwriter, and entrepreneur.  Best known for creating the Star Wars and Indiana Jones franchises.",
+                    "Birth": "1944",
+                    "Death": "n/a"
+                }, 
+            </td>
+        </tr>
+        <tr>
+            <td>Allow new users to register</td>
+            <td>/users</td>
+            <td>POST</td>
+            <td>A JSON object holding data about the user to add, including an ID</td>
+            <td>
+                User data structure:
+                <br>
+                <br>
+                "id": 1,
+                "Username": "Hannah Montana",
+                "Password": "7321",
+                "Email": "hmontana7321@gmail.com",
+                "Birthday": "07/21/1993",
+            </td>
+            <td>A JSON object holding data about the user that was added</td>
+            <td>
+                A text message indicating the user has been successfully added:
+                <br>
+                <br>
+                "User added!"
+            </td>
+        </tr>
+        <tr>
+            <td>Allow users to update their user info</td>
+            <td>/users/:Username</td>
+            <td>PUT</td>
+            <td>None</td>
+            <td>/users/Hello%20Kitty</td>
+            <td>A JSON object containing updated username</td>
+            <td>
+                Show updated user info:
+                <br>
+                <br>
+                id: 2,
+                Username: "Hello Kitty",
+                Password: "1974",
+                Eamil: "hellokitty1974@yahoo.com",
+                Birthday: "11/01/1974",
+            </td>
+        </tr>
+        <tr>
+            <td>Allow users to add a movie to their list of favorites</td>
+            <td>/users/:Username/favorites</td>
+            <td>POST</td>
+            <td>None</td>
+            <td>/users/Hello%20Kitty/favorites</td>
+            <td>A text message indicating user has added favorite</td>
+            <td>Display message:
+                <br>
+                <br>
+                "Successfully added movie to favorites!"
+            </td>
+        </tr>
+        <tr>
+            <td>Allow users to remove a movie from their list of favorites</td>
+            <td>/users/:Username/favorites</td>
+            <td>DELETE</td>
+            <td>None</td>
+            <td>/users/Hello%20Kitty/favorites</td>
+            <td>A text message indicating user has removed favorite</td>
+            <td>Display message:
+                <br>
+                <br>
+                "Successfully removed movie from favorites!"
+            </td>
+        </tr>
+        <tr>
+            <td>Allow existing users to deregister</td>
+            <td>/users/:Email</td>
+            <td>DELETE</td>
+            <td>None</td>
+            <td>/users/hellokitty1974@yahoo.com</td>
+            <td>A text message indicating user has been deregistered</td>
+            <td>Display message:
+                <br>
+                <br>
+                "User Deleted."
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
