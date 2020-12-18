@@ -157,12 +157,12 @@ app.get("/users/:Username", (req, res) => {
 });
 
 // allows user to add movie to favorites
-app.post("/users/:Username/favorites/:MovieID", (req, res) => {
+app.post("/users/:Username/favorites/:movieID", (req, res) => {
     res.status(500).send("Successfully added movie to favorites!");
 });
 
 // allows user to remove movie from favorites
-app.delete("/users/:Username/favorites/:MovieID", (req, res) => {
+app.delete("/users/:Username/favorites/:movieID", (req, res) => {
     res.status(500).send("Successfully removed movie from favorites!");
 });
 
