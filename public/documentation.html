@@ -152,10 +152,10 @@
         </tr>
         <tr>
             <td>Allow users to add a movie to their list of favorites</td>
-            <td>/users/:Username/favorites</td>
+            <td>/users/:Username/favorites/:MovieID</td>
             <td>POST</td>
             <td>None</td>
-            <td>/users/Hello%20Kitty/favorites</td>
+            <td>/users/Hello%20Kitty/favorites/id:1</td>
             <td>A text message indicating user has added favorite</td>
             <td>Display message:
                 <br>
@@ -165,10 +165,10 @@
         </tr>
         <tr>
             <td>Allow users to remove a movie from their list of favorites</td>
-            <td>/users/:Username/favorites</td>
+            <td>/users/:Username/favorites/:MovieID</td>
             <td>DELETE</td>
             <td>None</td>
-            <td>/users/Hello%20Kitty/favorites</td>
+            <td>/users/Hello%20Kitty/favorites/id:1</td>
             <td>A text message indicating user has removed favorite</td>
             <td>Display message:
                 <br>
