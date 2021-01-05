@@ -35,20 +35,18 @@
             <td>A JSON object holding data about all the movies.</td>
             <td>
                 {
-                    "id": 1,
+                    "_id": "5fecc99d97a12583de40cc52",
                     "Title": "Star Wars: Episode IV - A New Hope",
+                    "Description": "UPDATE! NEW! UPDATE! -- Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
+                    "ReleaseYear": "1977",
                 }
                 <br>
                 <br>
                 {
-                    "id": 2,
-                    "Title": "Fight Club",
-                }
-                <br>
-                <br>
-                {
-                    "id": 3,
-                    "Title": "Inception",
+                    "_id": "5fecc9fa97a12583de40cc57",
+                    "Title": "Interstellar",
+                    "Description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+                    "ReleaseYear": "2014",
                 }
             </td>
         </tr>
@@ -58,23 +56,23 @@
             <td>GET</td>
             <td>None</td>
             <td>/movies/Inception</td>
-            <td>A JSON object holding data about a single movie, containing description, genre, director, image URL, featured or not</td>
+            <td>A JSON object holding data about a single movie, containing description, release year, genre, director, image URL, featured or not</td>
             <td>
                 {
-                    "id": 3,
+                    "_id": "5fecc9f497a12583de40cc56",
                     "Title": "Inception",
                     "Description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+                    "ReleaseYear": "2010",
                     "Genre": {
                         "Name": "Action",
-                        "Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases."
+                        "Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases. Action films tend to feature a mostly resourceful hero struggling against incredible odds, which include life-threatening situations, a dangerous villain, or a pursuit which usually concludes in victory for the hero."
                     },
                     "Director": {
                         "Name": "Christopher Nolan",
-                        "Bio": "Christopher Edward Nolan is a British-American film director, producer, and screenwriter. His directorial efforts have grossed more than US$5.1 billion worldwide, garnered 34 Oscar nominations and ten wins. ",
+                        "Bio": "UPDATE! NEW! UPDATE! -- Christopher Edward Nolan is a British-American film director, producer, and screenwriter.",
                         "Birth": "1970",
-                        "Death": "n/a"
                     },
-                    "ImagePath": "https://www.imdb.com/title/tt1375666/mediaviewer/rm3426651392?ref_=tt_ov_i",
+                    "ImagePath": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
                     "Featured": true
                 }
             </td>
@@ -84,12 +82,12 @@
             <td>/movies/genres/:Name</td>
             <td>GET</td>
             <td>None</td>
-            <td>/movies/genres/Action</td>
+            <td>/movies/genres/Sci-Fi</td>
             <td>A JSON object holding data about a genre and its description</td>
             <td>
                 "Genre": {
-                    "Name": "Action",
-                    "Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases."
+                    "Name": "Sci-Fi",
+                    "Description": "Science fiction, or sci-fi, is a film genre that uses speculative, fictional science-based depictions of phenomena that are not fully accepted by mainstream science, such as extraterrestrial lifeforms, alien worlds, extrasensory perception and time travel, along with futuristic elements such as spacecraft, robots, cyborgs, interstellar travel or other technologies."
                 },
             </td>
         </tr>
@@ -105,7 +103,6 @@
                     "Name": "George Lucas",
                     "Bio": "George Walton Lucas Jr. is an American film director, producer, screenwriter, and entrepreneur.  Best known for creating the Star Wars and Indiana Jones franchises.",
                     "Birth": "1944",
-                    "Death": "n/a"
                 }, 
             </td>
         </tr>
@@ -115,21 +112,29 @@
             <td>POST</td>
             <td>A JSON object holding data about the user to add, including an ID</td>
             <td>
-                User data structure:
+                Expected user data structure:
                 <br>
                 <br>
                 "id": 1,
-                "Username": "Hannah Montana",
-                "Password": "7321",
-                "Email": "hmontana7321@gmail.com",
-                "Birthday": "07/21/1993",
+                "Username": "momoFuku3",
+                "Password": "peach123",
+                "Email": "momosan3002@gmail.com",
+                "Birthday": "03/02/1981",
             </td>
             <td>A JSON object holding data about the user that was added</td>
             <td>
-                A text message indicating the user has been successfully added:
+                Status code 201, user created:
                 <br>
                 <br>
-                "User added!"
+                {
+                    "FavoriteMovies": [],
+                    "_id": "5ff3d5f176d0626305a8bb08",
+                    "Username": "momoFuku3",
+                    "Password": "peach123",
+                    "Email": "momosan3002@gmail.com",
+                    "Birthday": "1981-03-02T05:00:00.000Z",
+                    "__v": 0
+                }
             </td>
         </tr>
         <tr>
@@ -137,56 +142,74 @@
             <td>/users/:Username</td>
             <td>PUT</td>
             <td>None</td>
-            <td>/users/Hello%20Kitty</td>
-            <td>A JSON object containing updated username</td>
+            <td>/users/momoFuku3</td>
+            <td>A JSON object containing updated username, password, email</td>
             <td>
                 Show updated user info:
                 <br>
                 <br>
-                id: 2,
-                Username: "Hello Kitty",
-                Password: "1974",
-                Eamil: "hellokitty1974@yahoo.com",
-                Birthday: "11/01/1974",
+                {
+                    "FavoriteMovies": [],
+                    "_id": "5ff3ce7676d0626305a8bb07",
+                    "Username": "momo500",
+                    "Password": "500peaches",
+                    "Email": "momo500@gmail.com",
+                    "Birthday": "1981-03-02T05:00:00.000Z",
+                    "__v": 0
+                }
             </td>
         </tr>
         <tr>
             <td>Allow users to add a movie to their list of favorites</td>
-            <td>/users/:Username/favorites/:movieID</td>
+            <td>/users/:Username/movies/:MovieID</td>
             <td>POST</td>
             <td>None</td>
-            <td>/users/Hello%20Kitty/favorites/id:1</td>
-            <td>A text message indicating user has added favorite</td>
-            <td>Display message:
-                <br>
-                <br>
-                "Successfully added movie to favorites!"
+            <td>/users/momo500/movies/id:20</td>
+            <td>A document with updated user's list of favorite movies is returned</td>
+            <td>
+                {
+                    "FavoriteMovies": [
+                        "5fecca8297a12583de40cc65"
+                    ],
+                    "_id": "5ff3ce7676d0626305a8bb07",
+                    "Username": "momo500",
+                    "Password": "500peaches",
+                    "Email": "momo500@gmail.com",
+                    "Birthday": "1981-03-02T05:00:00.000Z",
+                    "__v": 0
+                }
             </td>
         </tr>
         <tr>
             <td>Allow users to remove a movie from their list of favorites</td>
-            <td>/users/:Username/favorites/:movieID</td>
+            <td>/users/:Username/movies/:MovieID</td>
             <td>DELETE</td>
             <td>None</td>
-            <td>/users/Hello%20Kitty/favorites/id:1</td>
-            <td>A text message indicating user has removed favorite</td>
-            <td>Display message:
-                <br>
-                <br>
-                "Successfully removed movie from favorites!"
+            <td>/users/momo500/movies/id:20</td>
+            <td>A document with updated user's list of favorite movies is returned</td>
+            <td>
+                {
+                    "FavoriteMovies": [],
+                    "_id": "5ff3ce7676d0626305a8bb07",
+                    "Username": "momo500",
+                    "Password": "500peaches",
+                    "Email": "momo500@gmail.com",
+                    "Birthday": "1981-03-02T05:00:00.000Z",
+                    "__v": 0
+                }
             </td>
         </tr>
         <tr>
             <td>Allow existing users to deregister</td>
-            <td>/users/:Email</td>
+            <td>/users/:Username</td>
             <td>DELETE</td>
             <td>None</td>
-            <td>/users/hellokitty1974@yahoo.com</td>
+            <td>/users/momo500</td>
             <td>A text message indicating user has been deregistered</td>
             <td>Display message:
                 <br>
                 <br>
-                "User Deleted."
+                "momo500 was deleted."
             </td>
         </tr>
     </table>

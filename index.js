@@ -1,186 +1,246 @@
-const express = require("express");
-    morgan = require("morgan");
+const express = require("express"),
+  morgan = require("morgan"),
+  bodyParser = require("body-parser"),
+  uuid = require("uuid");
+mongoose = require("mongoose");
+Models = require("./models.js");
 const app = express();
+const Movies = Models.Movie;
+const Users = Models.User;
+// local connection
+mongoose.connect("mongodb://localhost:27017/myFlixDB", {useNewUrlParser: true});
+// mongoose.connect(
+//   "mongodb+srv://myflixdbadmin:genericpw@startercluster-piq8s.mongodb.net/myFlixDB?retryWrites=true&w=majority",
+//   { useNewUrlParser: true }
+// );
 
-// express.static to serve documentation file from public folder
-app.use(express.static("public"));
-
-// morgan middleware to log all requests
 app.use(morgan("common"));
+app.use(express.static("public"));
+app.use(bodyParser.json());
 
-// movies
-let movies = [
-    {
-        id: 1,
-        Title: "Star Wars: Episode IV - A New Hope",
-        Description:
-            "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
-        Genre: {
-            Name: "Action Fantasy Adventure",
-            Description: 
-                "Action Fantasy Adventure is a film genre of speculative fiction set in a fictional universe, which also features action sequences and elements of travel. Typical plots involve protagonists traveling to far away lands to fultill a goal.",
-        },
-        Director: {
-            Name: "George Lucas",
-            Bio:
-                "George Walton Lucas Jr. is an American film director, producer, screenwriter, and entrepreneur.  Best known for creating the Star Wars and Indiana Jones franchises.",
-            Birth: "1944",
-            Death: "n/a",
-        },
 
-        ImagePath:
-            "https://www.imdb.com/title/tt0076759/mediaviewer/rm3263717120?ref_=tt_ov_i",
-        Featured: true,
-    },
-    {
-        id: 2,
-        Title: "Fight Club",
-        Description:
-            "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
-        Genre: {
-            Name: "Drama",
-            Description:
-                "Drama is a category of narrative fiction, or semi-fiction, intended to be more serious than humorous in tone.",
-        },
-        Director: {
-            Name: "David Fincher",
-            Bio:
-                "David Andrew Leo Fincher is an American film director.  Known for his psychological therillers, his films have received thirty nominations at the Academy Awards including two for him as Best Director.",
-            Birth: "1962",
-            Death: "n/a",
-        },
 
-        ImagePath:
-            "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
-            Featured: true,
-    },
-    {
-        id: 3,
-        Title: "Inception",
-        Description:
-            "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-        Genre: {
-            Name: "Action",
-            Description: "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases.",
-        },
-        Director: {
-            Name: "Christopher Nolan",
-            Bio: "Christopher Edward Nolan is a British-American film director, producer, and screenwriter. His directorial efforts have grossed more than US$5.1 billion worldwide, garnered 34 Oscar nominations and ten wins. ",
-        Birth: "1970",
-        Death: "n/a",
-        },
 
-        ImagePath: "https://www.imdb.com/title/tt1375666/mediaviewer/rm3426651392?ref_=tt_ov_i",
-        Featured: true,
-    }
-];
 
-// users
-let users = [
-    {
-        id: 1,
-        Username: "Hannah Montana",
-        Password: "7321",
-        Email: "hmontana7321@gmail.com",
-        Birthday: "07/21/1993",
-        FavoriteMovies: [],
-    },
-
-    {
-        id: 2,
-        Username: "Hello Kitty",
-        Password: "1974",
-        Eamil: "hellokitty1974@yahoo.com",
-        Birthday: "11/01/1974",
-        FavoriteMovies: [],
-    },
-];
-
-// GET requests
-app.get("/", (req, res) => {
-    res.send("Welcome to StarFlix!");
+//list of all movies
+app.get("/", function (req, res) {
+  return res.status(400).send("Welcome to StarFlix!");
 });
 
-app.get("/movies", (req, res) => {
-    res.json(movies);
+app.get("/movies", function (req,res) {
+  Movies.find()
+    .then(function (movies) {
+      res.status(201).json(movies);
+    })
+    .catch(function (err) {
+      console.error(err);
+      res.status(500).send("Error: " + err);
+    });
+});
+//get information about movie by title
+app.get("/movies/:Title", function (req, res) {
+  Movies.findOne({ Title: req.params.Title })
+    .then(function (movies) {
+      res.json(movies);
+    })
+    .catch(function (err) {
+      console.error(err);
+      res.status(500).send("Error: " + err);
+    });
 });
 
-app.get("/movies/:Title", (req, res) => {
-    res.json(
-        movies.find((movie) => {
-            return movie.Title === req.params.Title;
-        })
+//get data about director
+app.get("/movies/director/:Name", function (req, res) {
+  Movies.findOne({ "Director.Name": req.params.Name })
+    .then(function (movies) {
+      res.json(movies.Director);
+    })
+    .catch(function (err) {
+      console.error(err);
+      res.status(500).send("Error: " + err);
+    });
+});
+
+//get data about genre by name
+app.get("/movies/genre/:Name", function (req, res) {
+  Movies.findOne({ "Genre.Name": req.params.Name })
+    .then(function (movies) {
+      res.json(movies.Genre);
+    })
+    .catch(function (err) {
+      console.error(err);
+      res.status(500).send("Error: " + err);
+    });
+});
+
+//get list of users
+app.get("/users", function (
+  req,
+  res
+) {
+  Users.find()
+    .then(function (users) {
+      res.status(201).json(users);
+    })
+    .catch(function (err) {
+      console.error(err);
+      res.status(500).send("Error: " + err);
+    });
+});
+
+//get a user by username
+app.get(
+  "/users/:Username",
+  function (req, res) {
+    Users.findOne({ Username: req.params.Username })
+      .then(function (user) {
+        res.json(user);
+      })
+      .catch(function (err) {
+        console.error(err);
+        res.status(500).send("Error: " + err);
+      });
+  }
+);
+
+//Add new user
+/* We’ll expect JSON in this format
+{
+ ID : Integer,
+ Username : String,
+ Password : String,
+ Email : String,
+ Birthday : Date
+}*/
+
+app.post(
+  "/users",
+  (req, res) => {
+    Users.findOne({ Username: req.body.Username })
+      .then(function (user) {
+        if (user) {
+          return res.status(400).send(req.body.Username + " already exists");
+        } else {
+          Users.create({
+            Username: req.body.Username,
+            Password: req.body.Password,
+            Email: req.body.Email,
+            Birthday: req.body.Birthday,
+          })
+            .then(function (user) {
+              res.status(201).json(user);
+            })
+            .catch(function (error) {
+              console.error(error);
+              res.status(500).send("Error: " + error);
+            });
+        }
+      })
+      .catch(function (error) {
+        console.error(error);
+        res.status(500).send("Error: " + error);
+      });
+  }
+);
+// delete user from the list by username
+app.delete(
+  "/users/:Username",
+  function (req, res) {
+    Users.findOneAndRemove({ Username: req.params.Username })
+      .then(function (user) {
+        if (!user) {
+          res.status(400).send(req.params.Username + " was not found");
+        } else {
+          res.status(200).send(req.params.Username + " was deleted.");
+        }
+      })
+      .catch(function (err) {
+        console.error(err);
+        res.status(500).send("Error: " + err);
+      });
+  }
+);
+
+// Update user info by username
+/* We’ll expect JSON in this format
+{
+  Username: String,
+  (required)
+  Password: String,
+  (required)
+  Email: String,
+  (required)
+  Birthday: Date
+}*/
+app.put(
+  "/users/:Username",
+  function (req, res) {
+    Users.findOneAndUpdate(
+      { Username: req.params.Username },
+      {
+        $set: {
+          Username: req.body.Username,
+          Password: req.body.Password,
+          Email: req.body.Email,
+          Birthday: req.body.Birthday,
+        },
+      },
+      { new: true }, //this line makes sure that the updated document is returned
+      function (err, updatedUser) {
+        if (err) {
+          console.error(err);
+          res.status(500).send("Error: " + err);
+        } else {
+          res.json(updatedUser);
+        }
+      }
     );
-});
+  }
+);
 
-app.get("/movies/director/:Name", (req, res) => {
-    res.json(
-        movies.find((movie) => {
-            return movie.Director.Name === req.params.Name;
-        })
+// Add movie to favorites list
+app.post(
+  "/users/:Username/movies/:MovieID",
+  function (req, res) {
+    Users.findOneAndUpdate(
+      { Username: req.params.Username },
+      {
+        $push: { FavoriteMovies: req.params.MovieID },
+      },
+      { new: true }, // This line makes sure that the updated document is returned
+      function (err, updatedUser) {
+        if (err) {
+          console.error(err);
+          res.status(500).send("Error: " + err);
+        } else {
+          res.json(updatedUser);
+        }
+      }
     );
-});
+  }
+);
 
-app.get("/movies/genres/:Name", (req, res) => {
-    res.json(
-        movies.find((movie) => {
-            return movie.Genre.Name === req.params.Name;
-        })
+// delete movie from favorite list for user
+app.delete(
+  "/users/:Username/movies/:MovieID",
+  function (req, res) {
+    Users.findOneAndUpdate(
+      { Username: req.params.Username },
+      { $pull: { FavoriteMovies: req.params.MovieID } },
+      { new: true },
+      function (err, updatedUser) {
+        if (err) {
+          console.error(err);
+          res.status(500).send("Error: " + err);
+        } else {
+          res.json(updatedUser);
+        }
+      }
     );
-});
+  }
+);
 
-// user endpoints
-app.get("/users", (req, res) => {
-    res.json(users);
-});
-
-// adds user
-app.post("/users", (req, res) => {
-    res.status(500).send("User added!");
-});
-
-// updates user information
-app.put("/users/:Username", (req, res) => {
-    res.json(
-        users.find((user) => {
-            return user.Username === req.params.Username;
-        })
-    );
-});
-
-app.get("/users/:Username", (req, res) => {
-    res.json(
-        users.find((user) => {
-            return user.Username === req.params.Username;
-        })
-    );
-});
-
-// allows user to add movie to favorites
-app.post("/users/:Username/favorites/:movieID", (req, res) => {
-    res.status(500).send("Successfully added movie to favorites!");
-});
-
-// allows user to remove movie from favorites
-app.delete("/users/:Username/favorites/:movieID", (req, res) => {
-    res.status(500).send("Successfully removed movie from favorites!");
-});
-
-// allows user to deregister
-app.delete("/users/:Email", (req, res) => {
-    res.status(500).send("User Deleted.");
-});
-
-app.get("/documentation", (req, res) => {
-    res.sendFile("public/documentation.html", { root: __dirname });
-});
-
-// error handling middleware
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send("Something broke!");
-});
-
-app.listen(8080, () => {
-    console.log("Your app is listening on port 8080.");
+var port = process.env.PORT || 8080;
+app.listen(port, "0.0.0.0", function () {
+  console.log("Listening on port 8080");
   });
