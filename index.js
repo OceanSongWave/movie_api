@@ -7,6 +7,7 @@ Models = require("./models.js");
 const app = express();
 const Movies = Models.Movie;
 const Users = Models.User;
+const { check, validationResult } = require("express-validator");
 // local connection
 mongoose.connect("mongodb://localhost:27017/myFlixDB", {useNewUrlParser: true});
 // mongoose.connect(
@@ -20,6 +21,8 @@ app.use(bodyParser.json());
 let auth = require('./auth')(app);
 const passport = require('passport');
 require('./passport');
+const cors = require('cors');
+app.use(cors());
 
 
 
@@ -114,35 +117,55 @@ app.get(
  Birthday : Date
 }*/
 
-app.post(
-  "/users",
-  (req, res) => {
-    Users.findOne({ Username: req.body.Username })
-      .then(function (user) {
-        if (user) {
-          return res.status(400).send(req.body.Username + " already exists");
-        } else {
-          Users.create({
-            Username: req.body.Username,
-            Password: req.body.Password,
-            Email: req.body.Email,
-            Birthday: req.body.Birthday,
+app.post("/users",
+// Validation logic here for request
+  //you can either use a chain of methods like .not().isEmpty()
+  //which means "opposite of isEmpty" in plain english "is not empty"
+  //or use .isLength({min: 5}) which means
+  //minimum value of 5 characters are only allowed
+  [
+    check('Username', 'Username is required').isLength({min: 5}),
+    check('Username', 'Username contains non alphanumeric characters - not allowed.').isAlphanumeric(),
+    check('Password', 'Password is required').not().isEmpty(),
+    check('Email', 'Email does not appear to be valid').isEmail()
+  ], (req, res) => {
+
+  // check the validation object for errors
+    let errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      return res.status(422).json({ errors: errors.array() });
+    }
+
+  let hashedPassword = Users.hashedPassword(req.body.Password);
+  Users.findOne({ Username: req.body.Username }) // Search to see if a user with the requested username already exists
+    .then(function (user) {
+      if (user) {
+        // If the user is found, send a response that it already exists
+        return res.status(400).send(req.body.Username + " already exists");
+      } else {
+        Users.create({
+          Username: req.body.Username,
+          Password: req.body.Password,
+          Email: req.body.Email,
+          Birthday: req.body.Birthday,
+        })
+          .then(function (user) {
+            res.status(201).json(user);
           })
-            .then(function (user) {
-              res.status(201).json(user);
-            })
-            .catch(function (error) {
-              console.error(error);
-              res.status(500).send("Error: " + error);
-            });
-        }
-      })
-      .catch(function (error) {
-        console.error(error);
-        res.status(500).send("Error: " + error);
-      });
+          .catch(function (error) {
+            console.error(error);
+            res.status(500).send("Error: " + error);
+          });
+      }
+    })
+    .catch(function (error) {
+      console.error(error);
+      res.status(500).send("Error: " + error);
+    });
   }
 );
+
 // delete user from the list by username
 app.delete(
   "/users/:Username", passport.authenticate('jwt', {session: false}),
@@ -241,7 +264,7 @@ app.delete(
   }
 );
 
-var port = process.env.PORT || 8080;
-app.listen(port, "0.0.0.0", function () {
-  console.log("Listening on port 8080");
-  });
+const port = process.env.PORT || 8080;
+app.listen(port, '0.0.0.0',() => {
+ console.log('Listening on Port ' + port);
+});
