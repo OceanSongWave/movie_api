@@ -150,6 +150,7 @@ app.post('/users',
       res.status(500).send('Error: ' + error);
     });
 });
+
 // delete user from the list by username
 app.delete(
   "/users/:Username", passport.authenticate('jwt', {session: false}),
