@@ -1,0 +1,384 @@
+{
+	"_id": {
+		"$oid": "5fecc99d97a12583de40cc52"
+	},
+	"Title": "Star Wars: Episode IV - A New Hope",
+	"Description": "UPDATE! NEW! UPDATE! -- Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
+	"ReleaseYear": "1977",
+	"Genre": {
+		"Name": "Adventure",
+		"Description": "Adventure films are a genre of film whose plots feature elements of travel. They typically involve protagonists who must leave their home or place of comfort and go to far away lands to fulfill a goal. Settings play an important role in adventure films, Settings play an important role in adventure films, sometimes as big as the characters themselves."
+	},
+	"Director": {
+		"Name": "George Lucas",
+		"Bio": "George Walton Lucas Jr. is an American film director, producer, screenwriter, and entrepreneur. Lucas is best known for creating the Star Wars and Indiana Jones franchises.",
+		"Birth": "1944"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecc9a697a12583de40cc53"
+	},
+	"Title": "Star Wars: Episode V - The Empire Strikes Back",
+	"Description": "After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued by Darth Vader and a bounty hunter named Boba Fett all over the galaxy.",
+	"ReleaseYear": "1980",
+	"Genre": {
+		"Name": "Adventure",
+		"Description": "Adventure films are a genre of film whose plots feature elements of travel. They typically involve protagonists who must leave their home or place of comfort and go to far away lands to fulfill a goal. Settings play an important role in adventure films, Settings play an important role in adventure films, sometimes as big as the characters themselves."
+	},
+	"Director": {
+		"Name": "Irvin Kershner",
+		"Bio": "Irvin Kershner was an American director, actor, and producer of film and television.",
+		"Birth": "1923",
+		"Death": "2010"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecc9e297a12583de40cc54"
+	},
+	"Title": "Star Wars: Episode VI - Return of the Jedi",
+	"Description": "After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.",
+	"ReleaseYear": "1983",
+	"Genre": {
+		"Name": "Adventure",
+		"Description": "Adventure films are a genre of film whose plots feature elements of travel. They typically involve protagonists who must leave their home or place of comfort and go to far away lands to fulfill a goal. Settings play an important role in adventure films, Settings play an important role in adventure films, sometimes as big as the characters themselves."
+	},
+	"Director": {
+		"Name": "Richard Marquand",
+		"Bio": "Richard Alfred Marquand was a Welsh film and television director",
+		"Birth": "1937",
+		"Death": "1987"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecc9e997a12583de40cc55"
+	},
+	"Title": "Fight Club",
+	"Description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+	"ReleaseYear": "1999",
+	"Genre": {
+		"Name": "Drama",
+		"Description": "Drama films are serious presentations or stories with settings or life situations that portray realistic characters in conflict with either themselves, others, or forces of nature. A dramatic film shows us human beings at their best, their worst, and everything in-between."
+	},
+	"Director": {
+		"Name": "David Fincher",
+		"Bio": "David Andrew Leo Fincher is an American film director.  Known for his psychological therillers, his films have received thirty nominations at the Academy Awards including two for him as Best Director.",
+		"Birth": "1962"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecc9f497a12583de40cc56"
+	},
+	"Title": "Inception",
+	"Description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+	"ReleaseYear": "2010",
+	"Genre": {
+		"Name": "Action",
+		"Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases. Action films tend to feature a mostly resourceful hero struggling against incredible odds, which include life-threatening situations, a dangerous villain, or a pursuit which usually concludes in victory for the hero."
+	},
+	"Director": {
+		"Name": "Christopher Nolan",
+		"Bio": "UPDATE! NEW! UPDATE! -- Christopher Edward Nolan is a British-American film director, producer, and screenwriter.",
+		"Birth": "1970"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecc9fa97a12583de40cc57"
+	},
+	"Title": "Interstellar",
+	"Description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+	"ReleaseYear": "2014",
+	"Genre": {
+		"Name": "Adventure",
+		"Description": "Adventure films are a genre of film whose plots feature elements of travel. They typically involve protagonists who must leave their home or place of comfort and go to far away lands to fulfill a goal. Settings play an important role in adventure films, Settings play an important role in adventure films, sometimes as big as the characters themselves."
+	},
+	"Director": {
+		"Name": "Christopher Nolan",
+		"Bio": "UPDATE! NEW! UPDATE! -- Christopher Edward Nolan is a British-American film director, producer, and screenwriter.",
+		"Birth": "1970"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca0497a12583de40cc58"
+	},
+	"Title": "Knives Out",
+	"Description": "A master detective investigates the death of the patriarch of a wealthy, dysfunctional family.",
+	"ReleaseYear": "2019",
+	"Genre": {
+		"Name": "Mystery",
+		"Description": "Mystery film is a genre of film that revolves around the solution of a problem or a crime. It focuses on the efforts of the detective, private investigator or amateur sleuth to solve the mysterious circumstances of an issue by means of clues, investigation, and clever deduction."
+	},
+	"Director": {
+		"Name": "Rian Johnson",
+		"Bio": "Rian Craig Johnson is an American film director, producer, and screenwriter.",
+		"Birth": "1973"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca0a97a12583de40cc59"
+	},
+	"Title": "Donnie Darko",
+	"Description": "After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.",
+	"ReleaseYear": "2001",
+	"Genre": {
+		"Name": "Sci-Fi",
+		"Description": "Science fiction, or sci-fi, is a film genre that uses speculative, fictional science-based depictions of phenomena that are not fully accepted by mainstream science, such as extraterrestrial lifeforms, alien worlds, extrasensory perception and time travel, along with futuristic elements such as spacecraft, robots, cyborgs, interstellar travel or other technologies."
+	},
+	"Director": {
+		"Name": "Richard Kelly",
+		"Bio": "James Richard Kelly is an American film director and writer.",
+		"Birth": "1975"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BZjZlZDlkYTktMmU1My00ZDBiLWFlNjEtYTBhNjVhOTM4ZjJjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca1697a12583de40cc5a"
+	},
+	"Title": "Ocean's Eleven",
+	"Description": "Danny Ocean and his ten accomplices plan to rob three Las Vegas casinos simultaneously.",
+	"ReleaseYear": "2001",
+	"Genre": {
+		"Name": "Thriller",
+		"Description": "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience."
+	},
+	"Director": {
+		"Name": "Steven Soderbergh",
+		"Bio": "Steven Andrew Soderbergh is an American film director, producer, screenwriter, cinematographer, and editor.",
+		"Birth": "1963"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BYzVmYzVkMmUtOGRhMi00MTNmLThlMmUtZTljYjlkMjNkMjJkXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca1e97a12583de40cc5b"
+	},
+	"Title": "Pan's Labyrinth",
+	"Description": "In the Falangist Spain of 1944, the bookish young stepdaughter of a sadistic army officer escapes into an eerie but captivating fantasy world.",
+	"ReleaseYear": "2006",
+	"Genre": {
+		"Name": "Fantasy",
+		"Description": "Fantasy films are a genre of speculative fiction set in a fictional universe, usually involving magic, supernatural events, and exotic fantasy worlds. Fantasy films are often inspired by real world myth and folklore.  These films capture audiences with a sense of wonder, escapism, and the extraordinary."
+	},
+	"Director": {
+		"Name": "Guillermo del Toro",
+		"Bio": "Guillermo del Toro Gómez is a Mexican filmmaker, author, actor, and former special effects makeup artist.",
+		"Birth": "1964"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BMTU3ODg2NjQ5NF5BMl5BanBnXkFtZTcwMDEwODgzMQ@@._V1_UY268_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca2897a12583de40cc5c"
+	},
+	"Title": "A Clockwork Orange",
+	"Description": "In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn't go as planned.",
+	"ReleaseYear": "1971",
+	"Genre": {
+		"Name": "Sci-Fi",
+		"Description": "Science fiction, or sci-fi, is a film genre that uses speculative, fictional science-based depictions of phenomena that are not fully accepted by mainstream science, such as extraterrestrial lifeforms, alien worlds, extrasensory perception and time travel, along with futuristic elements such as spacecraft, robots, cyborgs, interstellar travel or other technologies."
+	},
+	"Director": {
+		"Name": "Stanley Kubrick",
+		"Bio": "Stanley Kubrick was an American film director, producer, screenwriter, and photographer. He is frequently cited as one of the greatest filmmakers in cinematic history.",
+		"Birth": "1928",
+		"Death": "1999"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca3297a12583de40cc5d"
+	},
+	"Title": "The Big Lebowski",
+	"Description": "Jeff 'The Dude' Lebowski, mistaken for a millionaire of the same name, seeks restitution for his ruined rug and enlists his bowling buddies to help get it.",
+	"ReleaseYear": "1998",
+	"Genre": {
+		"Name": "Comedy",
+		"Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
+	},
+	"Director": {
+		"Name": "Joel Coen",
+		"Bio": "Joel David Coen is an American film director, producer, screenwriter, and editor.",
+		"Birth": "1954"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BMTQ0NjUzMDMyOF5BMl5BanBnXkFtZTgwODA1OTU0MDE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca4997a12583de40cc5e"
+	},
+	"Title": "Catch Me If You Can",
+	"Description": "Barely 21 yet, Frank is a skilled forger who has passed as a doctor, lawyer and pilot. FBI agent Carl, becomes obsessed with tracking down the con man. But Frank not only eludes capture, he revels in the pursuit.",
+	"ReleaseYear": "2002",
+	"Genre": {
+		"Name": "Biography",
+		"Description": "A biographical film is a film that dramatizes the life of a non-fictional or historically-based person or people. Such films show the life of a historical person and the central character's real name is used."
+	},
+	"Director": {
+		"Name": "Steven Spielberg",
+		"Bio": "Steven Allan Spielberg is an American film director, producer, and screenwriter. He began his career in the New Hollywood era, and is one of the most commercially successful directors in history.",
+		"Birth": "1946"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BMTY5MzYzNjc5NV5BMl5BanBnXkFtZTYwNTUyNTc2._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca5097a12583de40cc5f"
+	},
+	"Title": "Pulp Fiction",
+	"Description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+	"ReleaseYear": "1994",
+	"Genre": {
+		"Name": "Drama",
+		"Description": "Drama films are serious presentations or stories with settings or life situations that portray realistic characters in conflict with either themselves, others, or forces of nature. A dramatic film shows us human beings at their best, their worst, and everything in-between."
+	},
+	"Director": {
+		"Name": "Quentin Tarantino",
+		"Bio": "Quentin Jerome Tarantino is an American film director, screenwriter, producer, and actor.",
+		"Birth": "1963"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR1,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca5997a12583de40cc60"
+	},
+	"Title": "Citizen Kane",
+	"Description": "Following the death of publishing tycoon Charles Foster Kane, reporters scramble to uncover the meaning of his final utterance; 'Rosebud'.",
+	"ReleaseYear": "1941",
+	"Genre": {
+		"Name": "Drama",
+		"Description": "Drama films are serious presentations or stories with settings or life situations that portray realistic characters in conflict with either themselves, others, or forces of nature. A dramatic film shows us human beings at their best, their worst, and everything in-between."
+	},
+	"Director": {
+		"Name": "Orson Welles",
+		"Bio": "George Orson Welles was an American actor, director, writer and producer who is remembered for his innovative work in radio, theatre and film.",
+		"Birth": "1915",
+		"Death": "1985"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BYjBiOTYxZWItMzdiZi00NjlkLWIzZTYtYmFhZjhiMTljOTdkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca6197a12583de40cc61"
+	},
+	"Title": "Casino Royale",
+	"Description": "After earning 00 status and a licence to kill, Secret Agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro.",
+	"ReleaseYear": "2006",
+	"Genre": {
+		"Name": "Action",
+		"Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases. Action films tend to feature a mostly resourceful hero struggling against incredible odds, which include life-threatening situations, a dangerous villain, or a pursuit which usually concludes in victory for the hero."
+	},
+	"Director": {
+		"Name": "Martin Campbell",
+		"Bio": "Martin Campbell is a New Zealand film and television director based in the United Kingdom.",
+		"Birth": "1943"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BMDI5ZWJhOWItYTlhOC00YWNhLTlkNzctNDU5YTI1M2E1MWZhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca6a97a12583de40cc62"
+	},
+	"Title": "Goodfellas",
+	"Description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+	"ReleaseYear": "1990",
+	"Genre": {
+		"Name": "Drama",
+		"Description": "Drama films are serious presentations or stories with settings or life situations that portray realistic characters in conflict with either themselves, others, or forces of nature. A dramatic film shows us human beings at their best, their worst, and everything in-between."
+	},
+	"Director": {
+		"Name": "Martin Scorsese",
+		"Bio": "Martin Charles Scorsese is an American film director, producer, screenwriter, and actor. He is widely regarded as one of the most significant and influential directors in film history.",
+		"Birth": "1942"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca6f97a12583de40cc63"
+	},
+	"Title": "Casino",
+	"Description": "A tale of greed, deception, money, power, and murder occur between two best friends: a mafia enforcer and a casino executive compete against each other over a gambling empire, and over a fast-living and fast-loving socialite.",
+	"ReleaseYear": "1995",
+	"Genre": {
+		"Name": "Drama",
+		"Description": "Drama films are serious presentations or stories with settings or life situations that portray realistic characters in conflict with either themselves, others, or forces of nature. A dramatic film shows us human beings at their best, their worst, and everything in-between."
+	},
+	"Director": {
+		"Name": "Martin Scorsese",
+		"Bio": "Martin Charles Scorsese is an American film director, producer, screenwriter, and actor. He is widely regarded as one of the most significant and influential directors in film history.",
+		"Birth": "1942"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BMTcxOWYzNDYtYmM4YS00N2NkLTk0NTAtNjg1ODgwZjAxYzI3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca7897a12583de40cc64"
+	},
+	"Title": "The Lord of the Rings: The Return of the King",
+	"Description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+	"ReleaseYear": "2003",
+	"Genre": {
+		"Name": "Adventure",
+		"Description": "Adventure films are a genre of film whose plots feature elements of travel. They typically involve protagonists who must leave their home or place of comfort and go to far away lands to fulfill a goal. Settings play an important role in adventure films, Settings play an important role in adventure films, sometimes as big as the characters themselves."
+	},
+	"Director": {
+		"Name": "Peter Jackson",
+		"Bio": "Sir Peter Robert Jackson is a New Zealand film director, producer, and screenwriter.",
+		"Birth": "1961"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
+{
+	"_id": {
+		"$oid": "5fecca8297a12583de40cc65"
+	},
+	"Title": "The Matrix",
+	"Description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+	"ReleaseYear": "1999",
+	"Genre": {
+		"Name": "Action",
+		"Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases. Action films tend to feature a mostly resourceful hero struggling against incredible odds, which include life-threatening situations, a dangerous villain, or a pursuit which usually concludes in victory for the hero."
+	},
+	"Director": {
+		"Name": "The Wachowskis",
+		"Bio": "Lana Wachowski and Lilly Wachowski are American film and television directors, writers and producers.",
+		"Birth": "1965, 1967"
+	},
+	"ImagePath": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	"Featured": true
+}
