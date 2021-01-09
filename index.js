@@ -10,9 +10,9 @@ const Users = Models.User;
 const { check, validationResult } = require("express-validator");
 // local connection
 // mongoose.connect("mongodb://localhost:27017/myFlixDB", {useNewUrlParser: true});
-mongoose.connect(
-  "mongodb+srv://oceansong:rich4Database@starflixdb.ct9jy.mongodb.net/myFlixDB?retryWrites=true&w=majority",
-  { useNewUrlParser: true }
+mongoose.connect( process.env.CONNECTION_URI,
+  // "mongodb+srv://oceansong:rich4Database@starflixdb.ct9jy.mongodb.net/myFlixDB?retryWrites=true&w=majority",
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 app.use(morgan("common"));
