@@ -643,3 +643,12 @@ db.users.update(
 mongoexport -d myFlixDB -c movies -o myFlixDB_movies_pretty_new.json --pretty
 
 mongoexport -d myFlixDB -c users -o myFlixDB_users_pretty_new.json --pretty
+
+
+mongoimport --uri mongodb+srv://oceansong:rich4Database@starflixdb.ct9jy.mongodb.net/myFlixDB --collection movies --type json --file movies.json
+
+mongoimport --uri mongodb+srv://oceansong:rich4Database@starflixdb.ct9jy.mongodb.net/myFlixDB --collection users --type json --file users.json
+
+mongo "mongodb+srv://starflixdb.ct9jy.mongodb.net/myFlixDB" --username oceansong
+
+mongodb+srv://oceansong:rich4Database@starflixdb.ct9jy.mongodb.net/myFlixDB?retryWrites=true&w=majority
