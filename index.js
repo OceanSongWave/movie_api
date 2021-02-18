@@ -12,7 +12,7 @@ const { check, validationResult } = require("express-validator");
 
 // local connection test
 // mongoose.connect("mongodb://localhost:27017/myFlixDB", {useNewUrlParser: true});
-mongoose.connect(process.env.CONNECTION_URI,
+mongoose.connect("mongodb+srv://oceansong:oceansong@starflixdb.ct9jy.mongodb.net/myFlixDB?retryWrites=true&w=majority",
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
