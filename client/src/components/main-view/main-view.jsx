@@ -39,7 +39,7 @@ class MainView extends React.Component {
   }
 
   getMovies(token) {
-    axios.get('https://star-flix-movieworld.herokuapp.com/movies', {
+    axios.get('https://starflix-movieworld.herokuapp.com/movies', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
@@ -89,7 +89,7 @@ class MainView extends React.Component {
     });
     console.log('logout successful');
     alert('You have been successfully logged out');
-    window.open('/', '_self');
+    window.open('/client', '_self');
   }
 
 
