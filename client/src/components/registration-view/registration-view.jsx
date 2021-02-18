@@ -31,7 +31,7 @@ export function RegistrationView(props) {
         .then(response => {
           const data = response.data;
           console.log(data);
-          window.open('/', '_self'); // '_self' is necessary so the page will open in the current tab
+          window.open('/client', '_self'); // '_self' is necessary so the page will open in the current tab
           alert('You may now log in');
         })
         .catch(e => {

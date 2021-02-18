@@ -110,7 +110,7 @@ class MainView extends React.Component {
 
 
     return (
-      <Router>
+      <Router basename="/client">
         <div className="main-view">
           <Navbar
             bg="info"
