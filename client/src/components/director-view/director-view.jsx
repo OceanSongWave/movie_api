@@ -15,9 +15,9 @@ export class DirectorView extends React.Component {
   }
 
   render() {
-    const { movies, movie } = this.props;
+    const { movies, director } = this.props;
 
-    if (!movie) return null;
+    if (!director) return null;
 
     return (
       <Container className="wrapper container-fluid">
@@ -26,17 +26,17 @@ export class DirectorView extends React.Component {
           <Col className="director-view container-fluid align-items-center col-6">
             <div className="director-title">
               <span className="label"></span>
-              <span className="value">{movie.Director.Name}</span>
+              <span className="value">{director.Director.Name}</span>
             </div>
             <br />
             <div className="director-bio">
               <span className="label"></span>
-              <span className="value">{movie.Director.Bio}</span>
+              <span className="value">{director.Director.Bio}</span>
             </div>
             <br />
             <div className="director-birth">
               <span className="label">Birth Year:  </span>
-              <span className="value">{movie.Director.Birth}</span>
+              <span className="value">{director.Director.Birth}</span>
             </div>
             <br />
 

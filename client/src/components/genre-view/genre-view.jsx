@@ -16,9 +16,9 @@ export class GenreView extends React.Component {
   }
 
   render() {
-    const { movies, movie } = this.props;
+    const { movies, genre } = this.props;
 
-    if (!movie) return null;
+    if (!genre) return null;
 
     return (
       <Container className="wrapper container-fluid">
@@ -27,12 +27,12 @@ export class GenreView extends React.Component {
           <Col className="genre-view container-fluid align-items-center col-6">
             <div className="genre-title">
               <span className="label"></span>
-              <span className="value">{movie.Genre.Name}</span>
+              <span className="value">{genre.Genre.Name}</span>
             </div>
             <br />
             <div className="genre-description">
               <span className="label"></span>
-              <span className="value">{movie.Genre.Description}</span>
+              <span className="value">{genre.Genre.Description}</span>
             </div>
             <br />
             <Link to={`/`}>
@@ -42,7 +42,7 @@ export class GenreView extends React.Component {
           <Col className="col-3" />
         </Row>
 
-        <Container>
+         <Container>
         <h4 className="mt-4">Some {genre.Genre.Name} movies</h4>
         <div className="d-flex row mt-3 ml-2">
           {movies.map((movie) => {

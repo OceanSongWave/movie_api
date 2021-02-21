@@ -205,7 +205,7 @@ class MainView extends React.Component {
             path="/genres/:name"
             render={({ match }) => (
               <GenreView
-                movie={movies.find(
+                genre={movies.find(
                   (m) => m.Genre.Name === match.params.name
                 )}
                 movies={movies}
@@ -217,7 +217,7 @@ class MainView extends React.Component {
             path="/directors/:name"
             render={({ match }) => (
               <DirectorView
-                movie={movies.find(
+                director={movies.find(
                   (m) => m.Director.Name === match.params.name
                 )}
                 movies={movies}
