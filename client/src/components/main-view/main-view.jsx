@@ -120,7 +120,7 @@ class MainView extends React.Component {
             className="navbar shadow-sm mb-5"
           >
             <Navbar.Brand
-              href="/client"
+              href="/"
             >
               <img
                 src={logo}
