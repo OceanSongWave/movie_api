@@ -120,7 +120,7 @@ class MainView extends React.Component {
             className="navbar shadow-sm mb-5"
           >
             <Navbar.Brand
-              href="/"
+              href="/client"
             >
               <img
                 src={logo}
@@ -138,14 +138,14 @@ class MainView extends React.Component {
             >
               {!user ? (
                 <Nav className="mr-auto">
-                  <Nav.Link href="/">Login</Nav.Link>
-                  <Nav.Link href="/register">Join</Nav.Link>
+                  <Nav.Link href="/client">Login</Nav.Link>
+                  <Nav.Link href="/client/register">Join</Nav.Link>
                 </Nav>
               ) : (
                   <Nav className="mr-auto">
-                    <Nav.Link href={`/users/${user}`}>My Account</Nav.Link>
-                    <Nav.Link href="/">All Movies</Nav.Link>
-                    <Nav.Link href="/" onClick={() => this.logOut()}>Log Out</Nav.Link>{' '}
+                    <Nav.Link href={`client/users/${user}`}>My Account</Nav.Link>
+                    <Nav.Link href="/client">All Movies</Nav.Link>
+                    <Nav.Link href="/client" onClick={() => this.logOut()}>Log Out</Nav.Link>{' '}
                   </Nav>
                 )}
               <VisibilityFilterInput visibilityFilter={visibilityFilter} />
