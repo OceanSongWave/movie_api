@@ -10,7 +10,7 @@ const Movies = Models.Movie;
 const Users = Models.User;
 const { check, validationResult } = require("express-validator");
 
-// local connection test
+// local connection
 // mongoose.connect("mongodb://localhost:27017/myFlixDB", {useNewUrlParser: true});
 
 // mongoose.connect(
