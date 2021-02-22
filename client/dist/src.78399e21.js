@@ -53472,8 +53472,6 @@ var _reactRouterDom = require("react-router-dom");
 
 var _reactBootstrap = require("react-bootstrap");
 
-var _background = _interopRequireDefault(require("../../img/background.jpg"));
-
 require("./login-view.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -53555,11 +53553,6 @@ function LoginView(props) {
   };
 
   return _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("div", {
-    className: "background",
-    style: {
-      backgroundImage: "url(".concat(_background.default, ")")
-    }
-  }), _react.default.createElement("div", {
     className: "login-heading"
   }, "Welcome to StarFlix Movieworld!"), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Row, {
     className: "justify-content-center"
@@ -53614,7 +53607,7 @@ LoginView.propTypes = {
   }),
   onLoggedIn: _propTypes.default.func.isRequired
 };
-},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","prop-types":"../node_modules/prop-types/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","../../img/background.jpg":"img/background.jpg","./login-view.scss":"components/login-view/login-view.scss"}],"components/registration-view/registration-view.scss":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","prop-types":"../node_modules/prop-types/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","./login-view.scss":"components/login-view/login-view.scss"}],"components/registration-view/registration-view.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -54577,7 +54570,7 @@ var DirectorView = /*#__PURE__*/function (_React$Component) {
         className: "col-3"
       })), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("h4", {
         className: "mt-4"
-      }, "Other movies by ", director.Director.Name, " you may be interested in..."), _react.default.createElement("br", null), _react.default.createElement("div", {
+      }, "Movies by ", director.Director.Name, " you may be interested in..."), _react.default.createElement("br", null), _react.default.createElement("div", {
         className: "d-flex row mt-3 ml-1"
       }, movies.map(function (movie) {
         if (movie.Director.Name === director.Director.Name) {
@@ -55221,7 +55214,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53739" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54134" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

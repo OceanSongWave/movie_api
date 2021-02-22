@@ -50,7 +50,7 @@ export class DirectorView extends React.Component {
         <br />
 
         <Container>
-          <h4 className="mt-4">Other movies by {director.Director.Name} you may be interested in...</h4>
+          <h4 className="mt-4">Movies by {director.Director.Name} you may be interested in...</h4>
           <br />
           <div className="d-flex row mt-3 ml-1">
             {movies.map((movie) => {
