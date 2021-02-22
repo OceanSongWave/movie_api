@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './registration-view.scss';
 
 import { Form, Button, Container, Row } from 'react-bootstrap';
+
+import background from "../../img/background.jpg";
+
+import './registration-view.scss';
 
 export function RegistrationView(props) {
   const [username, setUsername] = useState('');
@@ -69,6 +72,10 @@ export function RegistrationView(props) {
 
   return (
     <Container>
+      <div
+        className="background"
+        style={{ backgroundImage: `url(${background})` }}
+      ></div>
       <div className="register-heading">
         Create a FREE Account
       </div>

@@ -46,9 +46,12 @@ export class DirectorView extends React.Component {
           </Col>
           <Col className="col-3" />
         </Row>
+        <br />
+        <br />
 
         <Container>
-          <h4 className="mt-4">Some {director.Director.Name} movies</h4>
+          <h4 className="mt-4">Other movies by {director.Director.Name} you may be interested in...</h4>
+          <br />
           <div className="d-flex row mt-3 ml-1">
             {movies.map((movie) => {
               if (movie.Director.Name === director.Director.Name) {
@@ -69,17 +72,12 @@ export class DirectorView extends React.Component {
                         <Card.Text>
                           {movie.Description.substring(0, 90)}...
                         </Card.Text>
-                      </Card.Body>
-                      <Card.Footer className="bg-white border-top-0">
                         <Link to={`/movies/${movie._id}`}>
-                          <Button
-                            variant="link"
-                            className="read-more-link pl-0"
-                          >
-                          Read more
-                          </Button>  
+                          <Button variant="info" size="sm">
+                            More Info
+                          </Button>
                         </Link>
-                      </Card.Footer>
+                      </Card.Body>
                     </Card>
                   </div>
                 );

@@ -1,12 +1,11 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-import './genre-view.scss';
+import "./genre-view.scss";
 
-import { Row, Container, Col, Card } from 'react-bootstrap';
-
+import { Row, Container, Col, Card } from "react-bootstrap";
 
 export class GenreView extends React.Component {
   constructor() {
@@ -41,48 +40,48 @@ export class GenreView extends React.Component {
           </Col>
           <Col className="col-3" />
         </Row>
+        <br />
+        <br />
 
-         <Container>
-        <h4 className="mt-4">Some {genre.Genre.Name} movies</h4>
-        <div className="d-flex row mt-3 ml-2">
-          {movies.map((movie) => {
-            if (movie.Genre.Name === genre.Genre.Name) {
-              return (
-                <div key={movie._id}>
-                  <Card
-                    className="mb-3 mr-2 h-100"
-                    style={{ width: '16rem' }}
-                  >
-                    <Card.Img variant="top" src={movie.ImagePath} />
-                    <Card.Body>
-                      <Link
-                        className="text-muted"
-                        to={`/movies/${movie._id}`}
-                      >
-                        <Card.Title>{movie.Title}</Card.Title>
-                      </Link>
-                      <Card.Text>
-                        {movie.Description.substring(0, 90)}...
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer className="bg-white border-top-0">
-                      <Link to={`/movies/${movie._id}`}>
-                        <Button
-                          variant="link"
-                          className="read-more-link pl-0"
+        <Container>
+          <h4 className="mt-4">
+            Other {genre.Genre.Name} Movies you may be interested in...
+          </h4>
+          <br />
+          <div className="d-flex row mt-3 ml-2">
+            {movies.map((movie) => {
+              if (movie.Genre.Name === genre.Genre.Name) {
+                return (
+                  <div key={movie._id}>
+                    <Card
+                      className="mb-3 mr-2 h-100"
+                      style={{ width: "16rem" }}
+                    >
+                      <Card.Img variant="top" src={movie.ImagePath} />
+                      <Card.Body>
+                        <Link
+                          className="text-muted"
+                          to={`/movies/${movie._id}`}
                         >
-                          Read more
-                        </Button>
-                      </Link>
-                    </Card.Footer>
-                  </Card>
-                </div>
-              );
-            }
-          })}
-        </div>
+                          <Card.Title>{movie.Title}</Card.Title>
+                        </Link>
+                        <Card.Text>
+                          {movie.Description.substring(0, 90)}...
+                        </Card.Text>
+                        <Link to={`/movies/${movie._id}`}>
+                          <Button variant="info" size="sm">
+                            More Info
+                          </Button>
+                        </Link>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                );
+              }
+            })}
+          </div>
+        </Container>
       </Container>
-      </Container >
     );
   }
 }

@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import axios from "axios";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-import { Form, Button, Container, Row } from 'react-bootstrap';
+import { Form, Button, Container, Row } from "react-bootstrap";
 
-import './login-view.scss';
+import background from "../../img/background.jpg";
+
+import "./login-view.scss";
 
 export function LoginView(props) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const [usernameErr, setUsernameErr] = useState({});
   const [passwordErr, setPasswordErr] = useState({});
@@ -21,20 +23,21 @@ export function LoginView(props) {
 
     if (isValid) {
       /* Send a request to the server for authentication */
-      axios.post('https://starflix-movieworld.herokuapp.com/login', {
-        Username: username,
-        Password: password
-      })
-        .then(response => {
+      axios
+        .post("https://starflix-movieworld.herokuapp.com/login", {
+          Username: username,
+          Password: password,
+        })
+        .then((response) => {
           const data = response.data;
           props.onLoggedIn(data);
         })
-        .catch(e => {
-          console.log('no such user')
+        .catch((e) => {
+          console.log("no such user");
           alert("Username contains non alphanumeric characters - not allowed");
         });
-    };
-  }
+    }
+  };
 
   const formValidation = () => {
     const usernameErr = {};
@@ -58,9 +61,11 @@ export function LoginView(props) {
 
   return (
     <Container>
-      <div className="login-heading">
-        Welcome to StarFlix Movieworld!
-      </div>
+      <div
+        className="background"
+        style={{ backgroundImage: `url(${background})` }}
+      ></div>
+      <div className="login-heading">Welcome to StarFlix Movieworld!</div>
       <br />
 
       <Row className="justify-content-center">
@@ -72,11 +77,11 @@ export function LoginView(props) {
               required
               placeholder="Enter Username"
               value={username}
-              onChange={e => setUsername(e.target.value)}
+              onChange={(e) => setUsername(e.target.value)}
             />
-            <Form.Text className="text-muted"
-            >Must be alphanumeric and contain at least 5 characters.
-          </Form.Text>
+            <Form.Text className="text-muted">
+              Must be alphanumeric and contain at least 5 characters.
+            </Form.Text>
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword">
@@ -87,11 +92,9 @@ export function LoginView(props) {
               required
               placeholder="Enter Password"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
-            <Form.Text className="text-muted"
-            >Password is required.
-          </Form.Text>
+            <Form.Text className="text-muted">Password is required.</Form.Text>
           </Form.Group>
         </Form>
       </Row>
@@ -104,23 +107,20 @@ export function LoginView(props) {
           onClick={handleSubmit}
         >
           Login
-          </Button>
+        </Button>
       </Row>
 
       <br />
 
       <Row className="justify-content-center">
         <Link to={`/register`}>
-          <Button
-            className="register-button"
-            variant="secondary"
-          >
+          <Button className="register-button" variant="secondary">
             New to StarFlix? - Join for FREE Here!
-            </Button>
+          </Button>
         </Link>
       </Row>
     </Container>
-  )
+  );
 }
 
 LoginView.propTypes = {

@@ -1,3 +1,16 @@
+body,
+html {
+  height: 100%;
+}
+
+.background {
+  background-image: url(../../img/background.jpg);
+  height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
   align-content: center;
 }
@@ -21,7 +34,7 @@
   flex-direction: column;
 }
 
-.text-muted{
+.text-muted {
   font-size: 0.85rem;
 }
 
@@ -31,7 +44,7 @@
 }
 
 .register-button {
-  color: #FFFF00;
+  color: #ffff00;
   font-size: 1.25rem;
   width: 25rem;
 }
