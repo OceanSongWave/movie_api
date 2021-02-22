@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import { Form, Button, Container, Row } from "react-bootstrap";
 
-// import background from "../../img/background.jpg";
+import background from "../../img/background.jpg";
 
 import "./login-view.scss";
 
@@ -61,10 +61,10 @@ export function LoginView(props) {
 
   return (
     <Container>
-      {/* <div
+      <div
         className="background"
         style={{ backgroundImage: `url(${background})` }}
-      ></div> */}
+      ></div>
       <div className="login-heading">Welcome to StarFlix Movieworld!</div>
       <br />
 
