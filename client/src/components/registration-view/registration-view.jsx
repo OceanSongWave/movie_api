@@ -102,7 +102,7 @@ export function RegistrationView(props) {
             <Form.Label>Choose a Password: </Form.Label>
             <Form.Control
               className="form-field"
-              type="text"
+              type="password"
               placeholder="Password"
               required
               value-={password}

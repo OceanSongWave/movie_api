@@ -53774,7 +53774,7 @@ function RegistrationView(props) {
     controlId: "formBasicPassword"
   }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Choose a Password: "), _react.default.createElement(_reactBootstrap.Form.Control, {
     className: "form-field",
-    type: "text",
+    type: "password",
     placeholder: "Password",
     required: true,
     "value-": password,
@@ -55221,7 +55221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56008" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61617" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
