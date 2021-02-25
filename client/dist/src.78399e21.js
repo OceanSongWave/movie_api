@@ -53447,14 +53447,12 @@ function MoviesList(props) {
 var _default = (0, _reactRedux.connect)(mapStateToProps)(MoviesList);
 
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","../visibility-filter-input/visibility-filter-input":"components/visibility-filter-input/visibility-filter-input.jsx","../movie-card/movie-card":"components/movie-card/movie-card.jsx","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js"}],"img/background.jpg":[function(require,module,exports) {
-module.exports = "/background.004d778f.jpg";
-},{}],"components/login-view/login-view.scss":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","../visibility-filter-input/visibility-filter-input":"components/visibility-filter-input/visibility-filter-input.jsx","../movie-card/movie-card":"components/movie-card/movie-card.jsx","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js"}],"components/login-view/login-view.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../img/background.jpg":[["background.004d778f.jpg","img/background.jpg"],"img/background.jpg"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/login-view/login-view.jsx":[function(require,module,exports) {
+},{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/login-view/login-view.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53471,8 +53469,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _reactRouterDom = require("react-router-dom");
 
 var _reactBootstrap = require("react-bootstrap");
-
-var _background = _interopRequireDefault(require("../../img/background.jpg"));
 
 require("./login-view.scss");
 
@@ -53554,57 +53550,55 @@ function LoginView(props) {
     return isValid;
   };
 
-  return _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("div", {
-    className: "background",
-    style: {
-      backgroundImage: "url(".concat(_background.default, ")")
-    }
-  }), _react.default.createElement("div", {
-    className: "login-heading"
-  }, "Welcome to StarFlix Movieworld!"), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Row, {
-    className: "justify-content-center"
-  }, _react.default.createElement(_reactBootstrap.Form, {
-    className: "login-form"
-  }, _react.default.createElement(_reactBootstrap.Form.Group, {
-    controlId: "formBasicUsername"
-  }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Username"), _react.default.createElement(_reactBootstrap.Form.Control, {
-    type: "text",
-    required: true,
-    placeholder: "Enter Username",
-    value: username,
-    onChange: function onChange(e) {
-      return setUsername(e.target.value);
-    }
-  }), _react.default.createElement(_reactBootstrap.Form.Text, {
-    className: "text-muted"
-  }, "Must be alphanumeric and contain at least 5 characters.")), _react.default.createElement(_reactBootstrap.Form.Group, {
-    controlId: "formBasicPassword"
-  }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Password"), _react.default.createElement(_reactBootstrap.Form.Control, {
-    className: "form-field",
-    type: "password",
-    required: true,
-    placeholder: "Enter Password",
-    value: password,
-    onChange: function onChange(e) {
-      return setPassword(e.target.value);
-    }
-  }), _react.default.createElement(_reactBootstrap.Form.Text, {
-    className: "text-muted"
-  }, "Password is required.")))), _react.default.createElement(_reactBootstrap.Row, {
-    className: "justify-content-center"
-  }, _react.default.createElement(_reactBootstrap.Button, {
-    className: "login-button",
-    variant: "primary",
-    type: "submit",
-    onClick: handleSubmit
-  }, "Login")), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Row, {
-    className: "justify-content-center"
-  }, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/register"
-  }, _react.default.createElement(_reactBootstrap.Button, {
-    className: "register-button",
-    variant: "secondary"
-  }, "New to StarFlix? - Join for FREE Here!"))));
+  return (// <div className="background">
+    _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("div", {
+      className: "login-heading"
+    }, "Welcome to StarFlix Movieworld!"), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Row, {
+      className: "justify-content-center"
+    }, _react.default.createElement(_reactBootstrap.Form, {
+      className: "login-form"
+    }, _react.default.createElement(_reactBootstrap.Form.Group, {
+      controlId: "formBasicUsername"
+    }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Username"), _react.default.createElement(_reactBootstrap.Form.Control, {
+      type: "text",
+      required: true,
+      placeholder: "Enter Username",
+      value: username,
+      onChange: function onChange(e) {
+        return setUsername(e.target.value);
+      }
+    }), _react.default.createElement(_reactBootstrap.Form.Text, {
+      className: "text"
+    }, "Must be alphanumeric and contain at least 5 characters.")), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Group, {
+      controlId: "formBasicPassword"
+    }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Password"), _react.default.createElement(_reactBootstrap.Form.Control, {
+      className: "form-field",
+      type: "password",
+      required: true,
+      placeholder: "Enter Password",
+      value: password,
+      onChange: function onChange(e) {
+        return setPassword(e.target.value);
+      }
+    }), _react.default.createElement(_reactBootstrap.Form.Text, {
+      className: "text"
+    }, "Password is required.")))), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Row, {
+      className: "justify-content-center"
+    }, _react.default.createElement(_reactBootstrap.Button, {
+      className: "login-button",
+      variant: "primary",
+      type: "submit",
+      onClick: handleSubmit
+    }, "Login")), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Row, {
+      className: "justify-content-center"
+    }, _react.default.createElement(_reactRouterDom.Link, {
+      to: "/register"
+    }, _react.default.createElement(_reactBootstrap.Button, {
+      className: "register-button",
+      variant: "secondary"
+    }, "New to StarFlix? - Join for Free Here!")))) // </div>
+
+  );
 }
 
 LoginView.propTypes = {
@@ -53614,12 +53608,12 @@ LoginView.propTypes = {
   }),
   onLoggedIn: _propTypes.default.func.isRequired
 };
-},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","prop-types":"../node_modules/prop-types/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","../../img/background.jpg":"img/background.jpg","./login-view.scss":"components/login-view/login-view.scss"}],"components/registration-view/registration-view.scss":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","prop-types":"../node_modules/prop-types/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","./login-view.scss":"components/login-view/login-view.scss"}],"components/registration-view/registration-view.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../img/background.jpg":[["background.004d778f.jpg","img/background.jpg"],"img/background.jpg"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/registration-view/registration-view.jsx":[function(require,module,exports) {
+},{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/registration-view/registration-view.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53636,8 +53630,6 @@ var _reactRouterDom = require("react-router-dom");
 var _axios = _interopRequireDefault(require("axios"));
 
 var _reactBootstrap = require("react-bootstrap");
-
-var _background = _interopRequireDefault(require("../../img/background.jpg"));
 
 require("./registration-view.scss");
 
@@ -53746,85 +53738,83 @@ function RegistrationView(props) {
     return isValid;
   };
 
-  return _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("div", {
-    className: "background",
-    style: {
-      backgroundImage: "url(".concat(_background.default, ")")
-    }
-  }), _react.default.createElement("div", {
-    className: "register-heading"
-  }, "Create a FREE Account"), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Row, {
-    className: "justify-content-center"
-  }, _react.default.createElement(_reactBootstrap.Form, {
-    className: "registration-form"
-  }, _react.default.createElement(_reactBootstrap.Form.Group, {
-    controlId: "formBasicUsername"
-  }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Pick a Username: "), _react.default.createElement(_reactBootstrap.Form.Control, {
-    className: "form-field",
-    type: "text",
-    placeholder: "Username",
-    required: true,
-    value: username,
-    onChange: function onChange(e) {
-      return setUsername(e.target.value);
-    }
-  }), _react.default.createElement(_reactBootstrap.Form.Text, {
-    className: "text-muted"
-  }, "Must be alphanumeric and contain at least 5 characters.")), _react.default.createElement(_reactBootstrap.Form.Group, {
-    controlId: "formBasicPassword"
-  }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Choose a Password: "), _react.default.createElement(_reactBootstrap.Form.Control, {
-    className: "form-field",
-    type: "password",
-    placeholder: "Password",
-    required: true,
-    "value-": password,
-    onChange: function onChange(e) {
-      return setPassword(e.target.value);
-    }
-  }), _react.default.createElement(_reactBootstrap.Form.Text, {
-    className: "text-muted"
-  }, "Password is required.")), _react.default.createElement(_reactBootstrap.Form.Group, {
-    controlId: "formBasicEmail"
-  }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Enter Email Address: "), _react.default.createElement(_reactBootstrap.Form.Control, {
-    className: "form-field",
-    type: "text",
-    placeholder: "example@gmail.com",
-    required: true,
-    value: email,
-    onChange: function onChange(e) {
-      return setEmail(e.target.value);
-    }
-  }), _react.default.createElement(_reactBootstrap.Form.Text, {
-    className: "text-muted"
-  }, "Must be a valid email address.")), _react.default.createElement(_reactBootstrap.Form.Group, {
-    controlId: "formBasicBirthday"
-  }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Enter Date of Birth:"), _react.default.createElement(_reactBootstrap.Form.Control, {
-    className: "form-field",
-    type: "date",
-    placeholder: "MM/DD/YYYY",
-    required: true,
-    value: birthday,
-    onChange: function onChange(e) {
-      return setBirthday(e.target.value);
-    }
-  })))), _react.default.createElement(_reactBootstrap.Row, {
-    className: "justify-content-center"
-  }, _react.default.createElement(_reactBootstrap.Button, {
-    type: "submit",
-    variant: "primary",
-    className: "create-account-button",
-    onClick: handleRegister
-  }, "Create My Account")), _react.default.createElement("br", null), _react.default.createElement("div", {
-    className: "current-user"
-  }, "Already have an account?"), _react.default.createElement(_reactBootstrap.Row, {
-    className: "justify-content-center"
-  }, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/"
-  }, _react.default.createElement(_reactBootstrap.Button, {
-    variant: "secondary",
-    size: "sm",
-    className: "current-user-button"
-  }, "Existing User - Login"))));
+  return (// <div className="background">
+    _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("div", {
+      className: "register-heading"
+    }, "Create Your Account"), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Row, {
+      className: "justify-content-center"
+    }, _react.default.createElement(_reactBootstrap.Form, {
+      className: "registration-form"
+    }, _react.default.createElement(_reactBootstrap.Form.Group, {
+      controlId: "formBasicUsername"
+    }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Pick a Username: "), _react.default.createElement(_reactBootstrap.Form.Control, {
+      className: "form-field",
+      type: "text",
+      placeholder: "Username",
+      required: true,
+      value: username,
+      onChange: function onChange(e) {
+        return setUsername(e.target.value);
+      }
+    }), _react.default.createElement(_reactBootstrap.Form.Text, {
+      className: "text"
+    }, "Must be alphanumeric and contain at least 5 characters.")), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Group, {
+      controlId: "formBasicPassword"
+    }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Choose a Password: "), _react.default.createElement(_reactBootstrap.Form.Control, {
+      className: "form-field",
+      type: "password",
+      placeholder: "Password",
+      required: true,
+      "value-": password,
+      onChange: function onChange(e) {
+        return setPassword(e.target.value);
+      }
+    }), _react.default.createElement(_reactBootstrap.Form.Text, {
+      className: "text"
+    }, "Password is required.")), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Group, {
+      controlId: "formBasicEmail"
+    }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Enter Email Address: "), _react.default.createElement(_reactBootstrap.Form.Control, {
+      className: "form-field",
+      type: "text",
+      placeholder: "example@gmail.com",
+      required: true,
+      value: email,
+      onChange: function onChange(e) {
+        return setEmail(e.target.value);
+      }
+    }), _react.default.createElement(_reactBootstrap.Form.Text, {
+      className: "text"
+    }, "Must be a valid email address.")), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Group, {
+      controlId: "formBasicBirthday"
+    }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Enter Date of Birth:"), _react.default.createElement(_reactBootstrap.Form.Control, {
+      className: "form-field",
+      type: "date",
+      placeholder: "MM/DD/YYYY",
+      required: true,
+      value: birthday,
+      onChange: function onChange(e) {
+        return setBirthday(e.target.value);
+      }
+    })))), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Row, {
+      className: "justify-content-center"
+    }, _react.default.createElement(_reactBootstrap.Button, {
+      type: "submit",
+      variant: "primary",
+      className: "create-account-button",
+      onClick: handleRegister
+    }, "Create Account")), _react.default.createElement("div", {
+      className: "current-user"
+    }, "Already have an account?"), _react.default.createElement(_reactBootstrap.Row, {
+      className: "justify-content-center"
+    }, _react.default.createElement(_reactRouterDom.Link, {
+      to: "/"
+    }, _react.default.createElement(_reactBootstrap.Button, {
+      variant: "secondary",
+      size: "sm",
+      className: "current-user-button"
+    }, "Existing User - Login")))) // </div>
+
+  );
 }
 
 ;
@@ -53836,7 +53826,7 @@ RegistrationView.propTypes = {
     birthday: _propTypes.default.string.isRequired
   })
 };
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","axios":"../node_modules/axios/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","../../img/background.jpg":"img/background.jpg","./registration-view.scss":"components/registration-view/registration-view.scss"}],"components/profile-view/profile-view.scss":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","axios":"../node_modules/axios/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","./registration-view.scss":"components/registration-view/registration-view.scss"}],"components/profile-view/profile-view.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -54397,6 +54387,8 @@ var MovieView = /*#__PURE__*/function (_React$Component) {
       var movie = this.props.movie;
       if (!movie) return null;
       return _react.default.createElement(_reactBootstrap.Container, {
+        className: "outterbox container-fluid"
+      }, _react.default.createElement(_reactBootstrap.Container, {
         className: "wrapper container-fluid"
       }, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
         className: "col-3"
@@ -54445,11 +54437,11 @@ var MovieView = /*#__PURE__*/function (_React$Component) {
       }, "Add Movie to Favorites")), _react.default.createElement("br", null), _react.default.createElement(_reactRouterDom.Link, {
         to: "/"
       }, _react.default.createElement(_reactBootstrap.Button, {
-        variant: "info",
+        variant: "secondary",
         size: "sm"
       }, "Back to All Movies"))), _react.default.createElement(_reactBootstrap.Col, {
         className: "col-3"
-      })));
+      }))));
     }
   }]);
 
@@ -54934,7 +54926,8 @@ var MainView = /*#__PURE__*/function (_React$Component) {
       }, _react.default.createElement("div", {
         className: "main-view"
       }, _react.default.createElement(_reactBootstrap.Navbar, {
-        bg: "info",
+        bg: "info" // bg="dark"
+        ,
         expand: "lg",
         sticky: "top",
         variant: "dark",
@@ -55121,7 +55114,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.jsx":[function(require,module,exports) {
+},{"./img/background-reels.jpg":[["background-reels.026c564e.jpg","img/background-reels.jpg"],"img/background-reels.jpg"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.jsx":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -55221,7 +55214,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61617" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60290" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

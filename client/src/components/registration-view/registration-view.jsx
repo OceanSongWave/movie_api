@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import { Form, Button, Container, Row } from 'react-bootstrap';
 
-import background from "../../img/background.jpg";
+// import background from "../../img/background-reels.jpg";
 
 import './registration-view.scss';
 
@@ -71,13 +71,10 @@ export function RegistrationView(props) {
   };
 
   return (
+    // <div className="background">
     <Container>
-      <div
-        className="background"
-        style={{ backgroundImage: `url(${background})` }}
-      ></div>
       <div className="register-heading">
-        Create a FREE Account
+        Create Your Account
       </div>
       <br />
       <Row className="justify-content-center">
@@ -93,10 +90,11 @@ export function RegistrationView(props) {
               onChange={(e) => setUsername(e.target.value)}
             />
             <Form.Text
-              className="text-muted"
+              className="text"
             >Must be alphanumeric and contain at least 5 characters.
           </Form.Text>
           </Form.Group>
+          <br />
 
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Choose a Password: </Form.Label>
@@ -109,10 +107,11 @@ export function RegistrationView(props) {
               onChange={(e) => setPassword(e.target.value)}
             />
             <Form.Text
-              className="text-muted"
+              className="text"
             >Password is required.
           </Form.Text>
           </Form.Group>
+          <br />
 
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Enter Email Address: </Form.Label>
@@ -125,10 +124,11 @@ export function RegistrationView(props) {
               onChange={(e) => setEmail(e.target.value)}
             />
             <Form.Text
-              className="text-muted"
+              className="text"
             >Must be a valid email address.
           </Form.Text>
           </Form.Group>
+          <br />
 
           <Form.Group controlId="formBasicBirthday">
             <Form.Label>Enter Date of Birth:</Form.Label>
@@ -144,6 +144,8 @@ export function RegistrationView(props) {
         </Form>
       </Row>
 
+      <br />
+
       <Row className="justify-content-center">
         <Button
           type="submit"
@@ -151,12 +153,9 @@ export function RegistrationView(props) {
           className="create-account-button"
           onClick={handleRegister}
         >
-          Create My Account
+          Create Account
         </Button>
       </Row>
-
-      <br />
-
 
       <div className="current-user">
         Already have an account?
@@ -173,6 +172,7 @@ export function RegistrationView(props) {
         </Link>
       </Row>
     </Container>
+    // </div>
   )
 };
 

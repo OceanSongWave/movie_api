@@ -1,14 +1,10 @@
-body {
-  height: 100%;
-}
-
-.background {
-  background-image: url(../../img/background.jpg);
-  height: 40vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+// .background {
+//   background-image: url(../../img/background-reels.jpg);
+//   // height: 100vh;
+//   background-position: center;
+//   background-size: auto;
+//   min-height: 100vh;
+// }
 
 .container {
   align-content: center;
@@ -16,16 +12,16 @@ body {
 
 .login-heading {
   text-align: center;
-  color: #138293;
-  font-size: 2.75rem;
+  color: white;
+  font-size: 3rem;
   font-weight: 600;
-  padding-top: 1.5rem;
+  padding-top: 5rem;
 }
 
 .login-form {
-  color: #138293;
-  font-weight: 500;
-  font-size: 1.25rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
   padding-top: 2.75rem;
   padding-bottom: 2.75rem;
   margin: 0 auto;
@@ -33,17 +29,20 @@ body {
   flex-direction: column;
 }
 
-.text-muted {
-  font-size: 0.85rem;
+.text {
+  font-size: 0.95rem;
+  color: white;
 }
 
 .login-button {
   font-size: 1.25rem;
+  font-weight: 500;
   width: 25rem;
 }
 
 .register-button {
   color: #ffff00;
   font-size: 1.25rem;
+  font-weight: 500;
   width: 25rem;
 }

@@ -114,6 +114,7 @@ class MainView extends React.Component {
         <div className="main-view">
           <Navbar
             bg="info"
+            // bg="dark"
             expand="lg"
             sticky="top"
             variant="dark"

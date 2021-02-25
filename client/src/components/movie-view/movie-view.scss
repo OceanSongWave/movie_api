@@ -1,15 +1,30 @@
 .movie-view {
-  color: #0f6774;
+  color: #05525e;
+  // color: white;
   position: static;
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 3.25rem;
 }
+.outterbox {
+  // background: #f0ecde;
+  background: rgb(206, 203, 195);
+  opacity: 0.9;
+  border: 2px solid #585441;
+  border-radius: 25px;
+  display: flex;
+  max-width: 40rem;
+  padding-top: 5rem;
+  text-align: center;
+  justify-content: center;
+}
 
 .movie-poster {
-  max-height: 31.25rem;
-  min-height: 27.5rem;
+  // max-height: 34rem;
+  // min-height: 27.5rem;
+  width: 100%;
+  height: 28rem;
   padding-bottom: 1.25rem;
 }
 
@@ -20,7 +35,7 @@
 
 .movie-description {
   font-size: 1.15rem;
-  font-weight: 450;
+  font-weight: 500;
 }
 
 .movie-genre,
@@ -29,21 +44,21 @@
   justify-content: center;
   align-items: center;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .genre-link {
   font-size: 1.25rem;
-  font-weight: 450;
+  font-weight: 550;
 }
 
 .director-link {
   font-size: 1.25rem;
-  font-weight: 450;
+  font-weight: 550;
 }
 
 .add-fav-button {
-  color: #138293;
+  color: #05525e;
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 550;
 }

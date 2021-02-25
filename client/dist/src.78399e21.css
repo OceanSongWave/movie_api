@@ -12,6 +12,7 @@
 }
 .card {
   width: 18rem;
+  border: 0.125rem solid #05525e;
   margin-bottom: 2.5rem;
 }
 
@@ -39,7 +40,7 @@
 
 .card-body {
   padding-bottom: 2.25rem;
-  background-color: #146f83;
+  background-color: #064e59;
   text-align: center;
 }
 
@@ -47,34 +48,22 @@
   width: 100%;
   height: 26.5rem;
 }
-body {
-  height: 100%;
-}
-
-.background {
-  background-image: url(/background.004d778f.jpg);
-  height: 40vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .container {
   align-content: center;
 }
 
 .login-heading {
   text-align: center;
-  color: #138293;
-  font-size: 2.75rem;
+  color: white;
+  font-size: 3rem;
   font-weight: 600;
-  padding-top: 1.5rem;
+  padding-top: 5rem;
 }
 
 .login-form {
-  color: #138293;
-  font-weight: 500;
-  font-size: 1.25rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
   padding-top: 2.75rem;
   padding-bottom: 2.75rem;
   margin: 0 auto;
@@ -82,44 +71,35 @@ body {
   flex-direction: column;
 }
 
-.text-muted {
-  font-size: 0.85rem;
+.text {
+  font-size: 0.95rem;
+  color: white;
 }
 
 .login-button {
   font-size: 1.25rem;
+  font-weight: 500;
   width: 25rem;
 }
 
 .register-button {
   color: #ffff00;
   font-size: 1.25rem;
+  font-weight: 500;
   width: 25rem;
 }
-body {
-  height: 100%;
-}
-
-.background {
-  background-image: url(/background.004d778f.jpg);
-  height: 40vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .register-heading {
   text-align: center;
-  color: #138293;
-  font-size: 2.5rem;
+  color: white;
+  font-size: 3rem;
   font-weight: 600;
-  padding-top: 1.5rem;
+  padding-top: 5rem;
 }
 
 .registration-form {
-  color: #138293;
-  font-weight: 500;
-  font-size: 1.25rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
   padding-top: 2.75rem;
   padding-bottom: 2.75rem;
   margin: 0 auto;
@@ -127,17 +107,19 @@ body {
   flex-direction: column;
 }
 
-.text-muted {
-  font-size: 13px;
+.text {
+  font-size: 0.95rem;
+  color: white;
 }
 
 .create-account-button {
   font-size: 1.25rem;
+  font-weight: 500;
   width: 25rem;
 }
 
 .current-user {
-  color: #138293;
+  color: white;
   text-align: center;
   padding-top: 2rem;
   font-style: italic;
@@ -147,16 +129,18 @@ body {
 
 .current-user-button {
   font-size: 1.25rem;
+  font-weight: 500;
   width: 25rem;
 }
 .userProfile {
-  color: #138293;
+  color: white;
   font-weight: 500;
+  padding-top: 5rem;
   padding-bottom: 3rem;
 }
 
 .userInfo {
-  color: #383838;
+  color: white;
 }
 
 .edit-button {
@@ -196,7 +180,7 @@ body {
   width: 200px;
 }
 .movie-view {
-  color: #0f6774;
+  color: #05525e;
   position: static;
   text-align: center;
   padding-left: 1rem;
@@ -204,9 +188,21 @@ body {
   padding-bottom: 3.25rem;
 }
 
+.outterbox {
+  background: #cecbc3;
+  opacity: 0.9;
+  border: 2px solid #585441;
+  border-radius: 25px;
+  display: flex;
+  max-width: 40rem;
+  padding-top: 5rem;
+  text-align: center;
+  justify-content: center;
+}
+
 .movie-poster {
-  max-height: 31.25rem;
-  min-height: 27.5rem;
+  width: 100%;
+  height: 28rem;
   padding-bottom: 1.25rem;
 }
 
@@ -217,7 +213,7 @@ body {
 
 .movie-description {
   font-size: 1.15rem;
-  font-weight: 450;
+  font-weight: 500;
 }
 
 .movie-genre,
@@ -226,26 +222,26 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .genre-link {
   font-size: 1.25rem;
-  font-weight: 450;
+  font-weight: 550;
 }
 
 .director-link {
   font-size: 1.25rem;
-  font-weight: 450;
+  font-weight: 550;
 }
 
 .add-fav-button {
-  color: #138293;
+  color: #05525e;
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 550;
 }
 .director-view {
-  color: #0f6774;
+  color: white;
   position: static;
   text-align: center;
   padding-left: 15px;
@@ -253,31 +249,31 @@ body {
 }
 
 .director-title {
-  padding-top: 3rem;
-  font-size: 1.85rem;
+  padding-top: 4rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 .director-bio {
   padding-top: 3rem;
-  font-size: 1.15rem;
-  font-weight: 450;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .director-birth {
   padding-top: 3rem;
   padding-bottom: 5rem;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 .mt-4 {
-  color: #0f6774;
+  color: white;
   text-align: center;
   font-weight: 600;
 }
 .genre-view {
-  color: #0f6774;
+  color: white;
   position: static;
   text-align: center;
   padding-left: 1rem;
@@ -285,21 +281,22 @@ body {
 }
 
 .genre-title {
-  padding-top: 3rem;
-  font-size: 1.85rem;
+  padding-top: 4rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 .genre-description {
   padding-top: 3rem;
   padding-bottom: 5rem;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 450;
 }
 
 .mt-4 {
-  color: #0f6774;
+  color: white;
   text-align: center;
+  font-size: 1.85rem;
   font-weight: 600;
 }
 .nav-link {
@@ -317,18 +314,27 @@ body {
 }
 
 body {
+  background-image: url(/background-reels.026c564e.jpg);
+  background-position: center;
+  background-size: auto;
+  background-repeat: repeat;
   background-color: gainsboro;
   font-family: "Poppins", sans-serif;
 }
 
 footer {
   position: relative;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
+  color: white;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 6.5rem;
+  padding: 10rem;
   text-align: center;
+}
+
+a {
+  color: white;
 }
 
 /*# sourceMappingURL=/src.78399e21.css.map */

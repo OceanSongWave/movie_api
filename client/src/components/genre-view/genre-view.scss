@@ -1,5 +1,6 @@
 .genre-view {
-  color: #0f6774;
+  // color: #0f6774;
+  color: white;
   position: static;
   text-align: center;
   padding-left: 1rem;
@@ -7,20 +8,22 @@
 }
 
 .genre-title {
-  padding-top: 3rem;
-  font-size: 1.85rem;
+  padding-top: 4rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 .genre-description {
   padding-top: 3rem;
   padding-bottom: 5rem;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 450;
 }
 
 .mt-4 {
-  color: #0f6774;
+  // color: #0f6774;
+  color: white;
   text-align: center;
+  font-size: 1.85rem;
   font-weight: 600;
 }

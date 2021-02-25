@@ -5,16 +5,25 @@ $color: steelblue;
 }
 
 body {
+  background-image: url(img/background-reels.jpg);
+  background-position: center;
+  background-size: auto;
+  background-repeat: repeat;
   background-color: gainsboro;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 footer {
   position: relative;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
+  color: white;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 6.5rem;
+  padding: 10rem;
   text-align: center;
+}
+
+a {
+  color: white;
 }

@@ -1,15 +1,14 @@
-import React from 'react';
-import axios from 'axios';
-import PropTypes from 'prop-types';
+import React from "react";
+import axios from "axios";
+import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
 
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Button, Container, Row, Col, Card } from "react-bootstrap";
 
-import './movie-view.scss';
+import "./movie-view.scss";
 
 export class MovieView extends React.Component {
-
   constructor() {
     super();
 
@@ -38,68 +37,67 @@ export class MovieView extends React.Component {
       });
   }
 
-
   render() {
     const { movie } = this.props;
 
     if (!movie) return null;
 
     return (
-      <Container className="wrapper container-fluid">
-        <Row>
-          <Col className="col-3" />
-          <div className="movie-view container-fluid align-items-center col-6">
-            <img className="movie-poster" src={movie.ImagePath} />
-            <div className="movie-title">
-              <span className="label"></span>
-              <span className="value">{movie.Title}</span>
-            </div>
-            <br />
-            <div className="movie-description">
-              <span className="label"></span>
-              <span className="value">{movie.Description}</span>
-            </div>
-            <br />
-            <div className="movie-genre">
-              <span className="label">Genre: </span>
-              <Link to={`/genres/${movie.Genre.Name}`}>
+      <Container className="outterbox container-fluid">
+        <Container className="wrapper container-fluid">
+          <Row>
+            <Col className="col-3" />
+            <div className="movie-view container-fluid align-items-center col-6">
+              <img className="movie-poster" src={movie.ImagePath} />
+              <div className="movie-title">
+                <span className="label"></span>
+                <span className="value">{movie.Title}</span>
+              </div>
+              <br />
+              <div className="movie-description">
+                <span className="label"></span>
+                <span className="value">{movie.Description}</span>
+              </div>
+              <br />
+              <div className="movie-genre">
+                <span className="label">Genre: </span>
+                <Link to={`/genres/${movie.Genre.Name}`}>
+                  <Button className="genre-link" variant="link">
+                    {movie.Genre.Name}
+                  </Button>
+                </Link>
+              </div>
+              <div className="movie-director">
+                <span className="label">Director: </span>
+                <Link to={`/directors/${movie.Director.Name}`}>
+                  <Button className="director-link" variant="link">
+                    {movie.Director.Name}
+                  </Button>
+                </Link>
+              </div>
+              <br />
+              <br />
+              <div>
                 <Button
-                  className="genre-link"
-                  variant="link">
-                  {movie.Genre.Name}</Button>
-              </Link>
-            </div>
-            <div className="movie-director">
-              <span className="label">Director: </span>
-              <Link to={`/directors/${movie.Director.Name}`}>
-                <Button
-                  className="director-link"
-                  variant="link">
-                  {movie.Director.Name}</Button>
-              </Link>
-            </div>
-            <br />
-            <br />
-            <div>
-              <Button
-                className="add-fav-button"
-                variant="warning"
-                size="sm"
-                onClick={() => this.addFavorite(movie)}
-              >
-                Add Movie to Favorites
-            </Button>
-            </div>
-            <br />
-            <Link to={`/`}>
-              <Button variant="info" size="sm">
-                Back to All Movies
+                  className="add-fav-button"
+                  variant="warning"
+                  size="sm"
+                  onClick={() => this.addFavorite(movie)}
+                >
+                  Add Movie to Favorites
                 </Button>
-            </Link>
-          </div>
-          <Col className="col-3" />
-        </Row>
-      </Container>
+              </div>
+              <br />
+              <Link to={`/`}>
+                <Button variant="secondary" size="sm">
+                  Back to All Movies
+                </Button>
+              </Link>
+            </div>
+            <Col className="col-3" />
+          </Row>
+        </Container>
+     </Container>
     );
   }
 }
@@ -119,7 +117,7 @@ MovieView.propTypes = {
       // Birth: PropTypes.string.isRequired,
       // Death: PropTypes.string,
     }),
-  })
+  }),
   // .isRequired,
   // onClick: PropTypes.func.isRequired,
-}
+};

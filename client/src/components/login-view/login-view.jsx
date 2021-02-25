@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import { Form, Button, Container, Row } from "react-bootstrap";
 
-import background from "../../img/background.jpg";
+// import background from "../../img/background-reels.jpg";
 
 import "./login-view.scss";
 
@@ -60,66 +60,71 @@ export function LoginView(props) {
   };
 
   return (
-    <Container>
-      <div
-        className="background"
-        style={{ backgroundImage: `url(${background})` }}
-      ></div>
-      <div className="login-heading">Welcome to StarFlix Movieworld!</div>
-      <br />
+    // <div className="background">
+      <Container>
+        <div className="login-heading">Welcome to StarFlix Movieworld!</div>
+        <br />
 
-      <Row className="justify-content-center">
-        <Form className="login-form">
-          <Form.Group controlId="formBasicUsername">
-            <Form.Label>Username</Form.Label>
-            <Form.Control
-              type="text"
-              required
-              placeholder="Enter Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <Form.Text className="text-muted">
-              Must be alphanumeric and contain at least 5 characters.
-            </Form.Text>
-          </Form.Group>
+        <Row className="justify-content-center">
+          <Form className="login-form">
+            <Form.Group controlId="formBasicUsername">
+              <Form.Label>Username</Form.Label>
+              <Form.Control
+                type="text"
+                required
+                placeholder="Enter Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <Form.Text className="text">
+                Must be alphanumeric and contain at least 5 characters.
+              </Form.Text>
+            </Form.Group>
 
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              className="form-field"
-              type="password"
-              required
-              placeholder="Enter Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <Form.Text className="text-muted">Password is required.</Form.Text>
-          </Form.Group>
-        </Form>
-      </Row>
+            <br />
 
-      <Row className="justify-content-center">
-        <Button
-          className="login-button"
-          variant="primary"
-          type="submit"
-          onClick={handleSubmit}
-        >
-          Login
-        </Button>
-      </Row>
+            <Form.Group controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                className="form-field"
+                type="password"
+                required
+                placeholder="Enter Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <Form.Text className="text">
+                Password is required.
+              </Form.Text>
+            </Form.Group>
+          </Form>
+        </Row>
 
-      <br />
+        <br />
+      
 
-      <Row className="justify-content-center">
-        <Link to={`/register`}>
-          <Button className="register-button" variant="secondary">
-            New to StarFlix? - Join for FREE Here!
+        <Row className="justify-content-center">
+          <Button
+            className="login-button"
+            variant="primary"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Login
           </Button>
-        </Link>
-      </Row>
-    </Container>
+        </Row>
+
+        <br />
+
+        <Row className="justify-content-center">
+          <Link to={`/register`}>
+            <Button className="register-button" variant="secondary">
+              New to StarFlix? - Join for Free Here!
+            </Button>
+          </Link>
+        </Row>
+      </Container>
+    // </div>
   );
 }
 
