@@ -59,7 +59,7 @@ export class DirectorView extends React.Component {
                   <div key={movie._id}>
                     <Card
                       className="mb-3 mr-2 h-100"
-                      style={{ width: '16rem' }}
+                      style={{ width: '18rem' }}
                     >
                       <Card.Img variant="top" src={movie.ImagePath} />
                       <Card.Body>
