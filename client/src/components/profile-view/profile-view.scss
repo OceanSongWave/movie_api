@@ -5,8 +5,25 @@
   padding-bottom: 3rem;
 }
 
+.outterbox-left {
+  // background: #f0ecde;
+  background: rgb(216, 213, 205);
+  opacity: 0.8;
+  border: 2px solid #585441;
+  border-radius: 15px;
+  display: flex;
+  max-width: 30rem;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: #016979;
+}
+
 .userInfo {
-  color: white;
+  color: blue;
+  font-size: 1.25rem;
+  font-weight: 550;
 }
 
 .edit-button {
@@ -27,9 +44,16 @@
   font-weight: 500;
 }
 
+.fav-movie {
+  width: 20rem;
+  height: 11rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
 .remove-fav {
-  color: #138293;
-  width: 18rem;
+  color: #016979;
+  width: 18.75rem;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 550;
 }

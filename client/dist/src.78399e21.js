@@ -53991,33 +53991,35 @@ var ProfileView = /*#__PURE__*/function (_React$Component) {
         style: {
           display: "flex"
         }
-      }, _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, null, _react.default.createElement(_reactBootstrap.Form, {
+      }, _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, null, _react.default.createElement("div", {
+        className: "outterbox-left container-fluid"
+      }, _react.default.createElement(_reactBootstrap.Form, {
         style: {
           width: "26rem",
           float: "left"
         }
       }, _react.default.createElement("h2", {
         style: {
-          textAlign: "left",
-          fontWeight: "600"
+          textAlign: "center",
+          fontWeight: "650"
         }
       }, "Your Profile Details"), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Group, {
         controlId: "formBasicUsername"
-      }, _react.default.createElement("h5", null, "Username: "), _react.default.createElement(_reactBootstrap.Form.Label, {
+      }, _react.default.createElement("h4", null, "Username: "), _react.default.createElement(_reactBootstrap.Form.Label, {
         className: "userInfo"
       }, this.state.username)), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Group, {
         controlId: "formBasicEmail"
-      }, _react.default.createElement("h5", null, "Email:"), _react.default.createElement(_reactBootstrap.Form.Label, {
+      }, _react.default.createElement("h4", null, "Email:"), _react.default.createElement(_reactBootstrap.Form.Label, {
         className: "userInfo"
       }, this.state.email)), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Group, {
         controlId: "formBasicDate"
-      }, _react.default.createElement("h5", null, "Date of Birth:"), _react.default.createElement(_reactBootstrap.Form.Label, {
+      }, _react.default.createElement("h4", null, "Date of Birth:"), _react.default.createElement(_reactBootstrap.Form.Label, {
         className: "userInfo"
       }, this.state.dob)), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactRouterDom.Link, {
         to: "/update/".concat(this.state.username)
       }, _react.default.createElement(_reactBootstrap.Button, {
         className: "edit-button",
-        variant: "secondary",
+        variant: "primary",
         type: "link",
         size: "sm"
       }, "Edit Your Profile")), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactRouterDom.Link, {
@@ -54033,31 +54035,33 @@ var ProfileView = /*#__PURE__*/function (_React$Component) {
         onClick: function onClick() {
           return _this4.handleDelete();
         }
-      }, "Delete Your Account"))), _react.default.createElement(_reactBootstrap.Col, null, _react.default.createElement("div", {
+      }, "Delete Your Account")))), _react.default.createElement(_reactBootstrap.Col, null, _react.default.createElement("div", {
         className: "favoriteMovies",
         style: {
           float: "right",
-          textAlign: "left",
+          textAlign: "center",
           width: "26rem"
         }
       }, _react.default.createElement("h2", {
         style: {
           textAlign: "left",
-          fontWeight: "600"
+          fontWeight: "600",
+          paddingTop: "5rem"
         }
       }, "Your Favorite Movies"), _react.default.createElement("br", null), _react.default.createElement("br", null), favoriteMovieList.map(function (movie) {
         return _react.default.createElement("div", {
+          className: "fav-movie",
           key: movie._id
         }, _react.default.createElement(_reactBootstrap.Card, null, _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactRouterDom.Link, {
           to: "/movies/".concat(movie._id)
-        }, _react.default.createElement(_reactBootstrap.Card.Title, null, movie.Title)))), _react.default.createElement(_reactBootstrap.Button, {
+        }, _react.default.createElement(_reactBootstrap.Card.Title, null, movie.Title))), _react.default.createElement(_reactBootstrap.Button, {
           className: "remove-fav",
           variant: "warning",
           size: "sm",
           onClick: function onClick() {
             return _this4.removeFavorite(movie);
           }
-        }, "Remove from Favorites"));
+        }, "Remove from Favorites")));
 
         _react.default.createElement("br", null);
       }))))));
@@ -54208,10 +54212,8 @@ function UpdateView(props) {
 
   return _react.default.createElement(_reactBootstrap.Container, {
     className: "update-view"
-  }, _react.default.createElement("h2", {
-    style: {
-      textAlign: "center"
-    }
+  }, _react.default.createElement("div", {
+    className: "update-heading"
   }, "Update Your Account"), _react.default.createElement(_reactBootstrap.Row, {
     className: "justify-content-center"
   }, _react.default.createElement(_reactBootstrap.Form, {
@@ -55214,7 +55216,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60290" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53472" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

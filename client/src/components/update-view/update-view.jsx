@@ -86,7 +86,9 @@ export function UpdateView(props) {
 
   return (
     <Container className="update-view">
-      <h2 style={{ textAlign: "center" }}>Update Your Account</h2>
+      <div className="update-heading">
+        Update Your Account
+      </div>
 
       <Row className="justify-content-center">
         <Form className="update-form">

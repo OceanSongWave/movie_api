@@ -1,6 +1,5 @@
 .movie-view {
-  color: #05525e;
-  // color: white;
+  color: #016979;
   position: static;
   text-align: center;
   padding-left: 1rem;
@@ -9,8 +8,8 @@
 }
 .outterbox {
   // background: #f0ecde;
-  background: rgb(206, 203, 195);
-  opacity: 0.9;
+  background: rgb(216, 213, 205);
+  opacity: 0.85;
   border: 2px solid #585441;
   border-radius: 25px;
   display: flex;
@@ -29,13 +28,13 @@
 }
 
 .movie-title {
-  font-size: 1.85rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .movie-description {
-  font-size: 1.15rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 550;
 }
 
 .movie-genre,
@@ -43,22 +42,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 650;
+  padding-top: 1rem;
 }
 
 .genre-link {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 550;
 }
 
 .director-link {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 550;
 }
 
 .add-fav-button {
-  color: #05525e;
+  color: #016979;
   font-size: 1.25rem;
   font-weight: 550;
 }

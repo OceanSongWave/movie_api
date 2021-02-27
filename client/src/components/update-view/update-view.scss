@@ -3,11 +3,27 @@
   color: #138293;
 }
 
-.update-form {
-  margin: 3rem auto;
+.update-heading {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 4rem;
+}
 
+.update-form {
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .update-button {
-  width: 200px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 25rem;
 }

@@ -11,14 +11,14 @@
   border: 1px solid #5F9EA0;
 }
 .card {
-  width: 18rem;
-  border: 0.125rem solid #05525e;
+  width: 19rem;
+  border: 0.125rem solid #068da2;
   margin-bottom: 2.5rem;
 }
 
 .card-title {
   color: gold;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-top: 0.5rem;
   margin-bottom: 0.75rem;
@@ -40,7 +40,7 @@
 
 .card-body {
   padding-bottom: 2.25rem;
-  background-color: #064e59;
+  background-color: #005360;
   text-align: center;
 }
 
@@ -57,7 +57,7 @@
   color: white;
   font-size: 3rem;
   font-weight: 600;
-  padding-top: 5rem;
+  padding-top: 4rem;
 }
 
 .login-form {
@@ -93,7 +93,7 @@
   color: white;
   font-size: 3rem;
   font-weight: 600;
-  padding-top: 5rem;
+  padding-top: 4rem;
 }
 
 .registration-form {
@@ -139,8 +139,24 @@
   padding-bottom: 3rem;
 }
 
+.outterbox-left {
+  background: #d8d5cd;
+  opacity: 0.8;
+  border: 2px solid #585441;
+  border-radius: 15px;
+  display: flex;
+  max-width: 30rem;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: #016979;
+}
+
 .userInfo {
-  color: white;
+  color: blue;
+  font-size: 1.25rem;
+  font-weight: 550;
 }
 
 .edit-button {
@@ -161,26 +177,50 @@
   font-weight: 500;
 }
 
+.fav-movie {
+  width: 20rem;
+  height: 11rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
 .remove-fav {
-  color: #138293;
-  width: 18rem;
+  color: #016979;
+  width: 18.75rem;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 550;
 }
 .update-view {
   margin: 0 auto;
   color: #138293;
 }
 
+.update-heading {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 4rem;
+}
+
 .update-form {
-  margin: 3rem auto;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .update-button {
-  width: 200px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 25rem;
 }
 .movie-view {
-  color: #05525e;
+  color: #016979;
   position: static;
   text-align: center;
   padding-left: 1rem;
@@ -189,8 +229,8 @@
 }
 
 .outterbox {
-  background: #cecbc3;
-  opacity: 0.9;
+  background: #d8d5cd;
+  opacity: 0.85;
   border: 2px solid #585441;
   border-radius: 25px;
   display: flex;
@@ -207,13 +247,13 @@
 }
 
 .movie-title {
-  font-size: 1.85rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .movie-description {
-  font-size: 1.15rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 550;
 }
 
 .movie-genre,
@@ -221,22 +261,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 650;
+  padding-top: 1rem;
 }
 
 .genre-link {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 550;
 }
 
 .director-link {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 550;
 }
 
 .add-fav-button {
-  color: #05525e;
+  color: #016979;
   font-size: 1.25rem;
   font-weight: 550;
 }
@@ -271,6 +312,7 @@
   color: white;
   text-align: center;
   font-weight: 600;
+  font-size: 1.85rem;
 }
 .genre-view {
   color: white;
