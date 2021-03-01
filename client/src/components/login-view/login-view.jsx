@@ -61,69 +61,66 @@ export function LoginView(props) {
 
   return (
     // <div className="background">
-      <Container>
-        <div className="login-heading">Welcome to StarFlix Movieworld!</div>
-        <br />
+    <Container className="wrapper container-fluid">
+      <div className="login-heading">Welcome to StarFlix Movieworld!</div>
+      <br />
 
-        <Row className="justify-content-center">
-          <Form className="login-form">
-            <Form.Group controlId="formBasicUsername">
-              <Form.Label>Username</Form.Label>
-              <Form.Control
-                type="text"
-                required
-                placeholder="Enter Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <Form.Text className="text">
-                Must be alphanumeric and contain at least 5 characters.
-              </Form.Text>
-            </Form.Group>
+      <Row className="justify-content-center">
+        <Form className="login-form">
+          <Form.Group controlId="formBasicUsername">
+            <Form.Label>Username</Form.Label>
+            <Form.Control
+              type="text"
+              required
+              placeholder="Enter Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <Form.Text className="text">
+              Must be alphanumeric and contain at least 5 characters.
+            </Form.Text>
+          </Form.Group>
 
-            <br />
+          <br />
 
-            <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                className="form-field"
-                type="password"
-                required
-                placeholder="Enter Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <Form.Text className="text">
-                Password is required.
-              </Form.Text>
-            </Form.Group>
-          </Form>
-        </Row>
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              className="form-field"
+              type="password"
+              required
+              placeholder="Enter Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <Form.Text className="text">Password is required.</Form.Text>
+          </Form.Group>
+        </Form>
+      </Row>
 
-        <br />
-      
+      <br />
 
-        <Row className="justify-content-center">
-          <Button
-            className="login-button"
-            variant="primary"
-            type="submit"
-            onClick={handleSubmit}
-          >
-            Login
+      <Row className="justify-content-center">
+        <Button
+          className="login-button"
+          variant="primary"
+          type="submit"
+          onClick={handleSubmit}
+        >
+          Login
+        </Button>
+      </Row>
+
+      <br />
+
+      <Row className="justify-content-center">
+        <Link to={`/register`}>
+          <Button className="register-button" variant="secondary">
+            New to StarFlix? - Join for Free Here!
           </Button>
-        </Row>
-
-        <br />
-
-        <Row className="justify-content-center">
-          <Link to={`/register`}>
-            <Button className="register-button" variant="secondary">
-              New to StarFlix? - Join for Free Here!
-            </Button>
-          </Link>
-        </Row>
-      </Container>
+        </Link>
+      </Row>
+    </Container>
     // </div>
   );
 }

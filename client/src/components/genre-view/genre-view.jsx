@@ -21,9 +21,10 @@ export class GenreView extends React.Component {
 
     return (
       <Container className="wrapper container-fluid">
+        <Container className="outterbox container-fluid">
         <Row>
           <Col className="col-3" />
-          <Col className="genre-view container-fluid align-items-center col-6">
+          <Col sm="auto" className="genre-view container-fluid align-items-center">
             <div className="genre-title">
               <span className="label"></span>
               <span className="value">{genre.Genre.Name}</span>
@@ -40,6 +41,7 @@ export class GenreView extends React.Component {
           </Col>
           <Col className="col-3" />
         </Row>
+        </Container>
         <br />
         <br />
 

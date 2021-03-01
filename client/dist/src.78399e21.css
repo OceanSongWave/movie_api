@@ -223,8 +223,8 @@
   color: #016979;
   position: static;
   text-align: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   padding-bottom: 3.25rem;
 }
 
@@ -242,18 +242,23 @@
 
 .movie-poster {
   width: 100%;
-  height: 28rem;
+  height: 100%;
+  max-width: 21rem;
+  max-height: 34rem;
   padding-bottom: 1.25rem;
 }
 
 .movie-title {
-  font-size: 2rem;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
 .movie-description {
-  font-size: 1.25rem;
-  font-weight: 550;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .movie-genre,
@@ -261,13 +266,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 650;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .genre-link {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 550;
 }
 
@@ -282,27 +287,41 @@
   font-weight: 550;
 }
 .director-view {
-  color: white;
+  color: #016979;
   position: static;
   text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 3.25rem;
+}
+
+.outterbox {
+  background: #d8d5cd;
+  opacity: 0.85;
+  border: 2px solid #585441;
+  border-radius: 25px;
+  display: flex;
+  max-width: 40rem;
+  padding-top: 5rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .director-title {
-  padding-top: 4rem;
+  text-align: center;
   font-size: 3rem;
   font-weight: 700;
 }
 
 .director-bio {
-  padding-top: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
 .director-birth {
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 5rem;
   font-size: 1.5rem;
   font-weight: 500;
@@ -315,24 +334,37 @@
   font-size: 1.85rem;
 }
 .genre-view {
-  color: white;
+  color: #016979;
   position: static;
   text-align: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 3.25rem;
+}
+
+.outterbox {
+  background: #d8d5cd;
+  opacity: 0.85;
+  border: 2px solid #585441;
+  border-radius: 25px;
+  display: flex;
+  max-width: 40rem;
+  padding-top: 5rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .genre-title {
-  padding-top: 4rem;
+  text-align: center;
   font-size: 3rem;
   font-weight: 700;
 }
 
 .genre-description {
-  padding-top: 3rem;
+  padding-top: 2.5rem;
   padding-bottom: 5rem;
-  font-size: 1.5rem;
-  font-weight: 450;
+  font-size: 1.45rem;
+  font-weight: 500;
 }
 
 .mt-4 {

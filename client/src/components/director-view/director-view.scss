@@ -1,33 +1,46 @@
 .director-view {
-  // color: #0f6774;
-  color: white;
+  color: #016979;
   position: static;
   text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 3.25rem;
+}
+
+.outterbox {
+  // background: #f0ecde;
+  background: rgb(216, 213, 205);
+  opacity: 0.85;
+  border: 2px solid #585441;
+  border-radius: 25px;
+  display: flex;
+  max-width: 40rem;
+  padding-top: 5rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .director-title {
-  padding-top: 4rem;
+  text-align: center;
   font-size: 3rem;
   font-weight: 700;
 }
 
 .director-bio {
-  padding-top: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
 .director-birth {
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 5rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
 .mt-4 {
-  // color: #0f6774;
   color: white;
   text-align: center;
   font-weight: 600;

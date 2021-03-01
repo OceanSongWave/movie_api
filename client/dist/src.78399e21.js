@@ -53551,7 +53551,9 @@ function LoginView(props) {
   };
 
   return (// <div className="background">
-    _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("div", {
+    _react.default.createElement(_reactBootstrap.Container, {
+      className: "wrapper container-fluid"
+    }, _react.default.createElement("div", {
       className: "login-heading"
     }, "Welcome to StarFlix Movieworld!"), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Row, {
       className: "justify-content-center"
@@ -54395,7 +54397,8 @@ var MovieView = /*#__PURE__*/function (_React$Component) {
       }, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
         className: "col-3"
       }), _react.default.createElement("div", {
-        className: "movie-view container-fluid align-items-center col-6"
+        sm: "auto",
+        className: "movie-view container-fluid align-items-center"
       }, _react.default.createElement("img", {
         className: "movie-poster",
         src: movie.ImagePath
@@ -54541,10 +54544,13 @@ var DirectorView = /*#__PURE__*/function (_React$Component) {
       if (!director) return null;
       return _react.default.createElement(_reactBootstrap.Container, {
         className: "wrapper container-fluid"
+      }, _react.default.createElement(_reactBootstrap.Container, {
+        className: "outterbox container-fluid"
       }, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
         className: "col-3"
       }), _react.default.createElement(_reactBootstrap.Col, {
-        className: "director-view container-fluid align-items-center col-6"
+        sm: "auto",
+        className: "director-view container-fluid align-items-center"
       }, _react.default.createElement("div", {
         className: "director-title"
       }, _react.default.createElement("span", {
@@ -54561,7 +54567,7 @@ var DirectorView = /*#__PURE__*/function (_React$Component) {
         className: "director-birth"
       }, _react.default.createElement("span", {
         className: "label"
-      }, "Birth Year:  "), _react.default.createElement("span", {
+      }, "Birth Year: "), _react.default.createElement("span", {
         className: "value"
       }, director.Director.Birth)), _react.default.createElement("br", null), _react.default.createElement(_reactRouterDom.Link, {
         to: "/"
@@ -54569,7 +54575,7 @@ var DirectorView = /*#__PURE__*/function (_React$Component) {
         variant: "info"
       }, "Back to All Movies"))), _react.default.createElement(_reactBootstrap.Col, {
         className: "col-3"
-      })), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("h4", {
+      }))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("h4", {
         className: "mt-4"
       }, "Movies by ", director.Director.Name, " you may be interested in..."), _react.default.createElement("br", null), _react.default.createElement("div", {
         className: "d-flex row mt-3 ml-1"
@@ -54580,7 +54586,7 @@ var DirectorView = /*#__PURE__*/function (_React$Component) {
           }, _react.default.createElement(_reactBootstrap.Card, {
             className: "mb-3 mr-2 h-100",
             style: {
-              width: '16rem'
+              width: "18rem"
             }
           }, _react.default.createElement(_reactBootstrap.Card.Img, {
             variant: "top",
@@ -54685,10 +54691,13 @@ var GenreView = /*#__PURE__*/function (_React$Component) {
       if (!genre) return null;
       return _react.default.createElement(_reactBootstrap.Container, {
         className: "wrapper container-fluid"
+      }, _react.default.createElement(_reactBootstrap.Container, {
+        className: "outterbox container-fluid"
       }, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
         className: "col-3"
       }), _react.default.createElement(_reactBootstrap.Col, {
-        className: "genre-view container-fluid align-items-center col-6"
+        sm: "auto",
+        className: "genre-view container-fluid align-items-center"
       }, _react.default.createElement("div", {
         className: "genre-title"
       }, _react.default.createElement("span", {
@@ -54707,7 +54716,7 @@ var GenreView = /*#__PURE__*/function (_React$Component) {
         variant: "info"
       }, "Back to All Movies"))), _react.default.createElement(_reactBootstrap.Col, {
         className: "col-3"
-      })), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("h4", {
+      }))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement("h4", {
         className: "mt-4"
       }, "Other ", genre.Genre.Name, " Movies you may be interested in..."), _react.default.createElement("br", null), _react.default.createElement("div", {
         className: "d-flex row mt-3 ml-2"
@@ -54718,7 +54727,7 @@ var GenreView = /*#__PURE__*/function (_React$Component) {
           }, _react.default.createElement(_reactBootstrap.Card, {
             className: "mb-3 mr-2 h-100",
             style: {
-              width: "16rem"
+              width: "18rem"
             }
           }, _react.default.createElement(_reactBootstrap.Card.Img, {
             variant: "top",
@@ -55216,7 +55225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53472" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56794" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
