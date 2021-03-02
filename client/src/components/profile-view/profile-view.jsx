@@ -193,3 +193,7 @@ export class ProfileView extends React.Component {
     );
   }
 }
+
+ProfileView.propTypes = {
+  movies: PropTypes.array.isRequired,
+};
