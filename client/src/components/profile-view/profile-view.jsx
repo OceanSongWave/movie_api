@@ -96,119 +96,100 @@ export class ProfileView extends React.Component {
 
     if (!movies) alert("Please sign in");
     return (
-      <div className="userProfile" style={{ display: "flex" }}>
-        <Container>
+      <Container className="wrapper container-fluid">
+        <Container className="outterbox container-fluid">
           <Row>
-            <Col>
-              <div className="outterbox-left container-fluid">
-                <Form style={{ width: "26rem", float: "left" }}>
-                  <h2 style={{ textAlign: "center", fontWeight: "650" }}>
-                    Your Profile Details
-                  </h2>
-                  <br />
-                  <br />
+            <Col
+              sm="auto"
+              className="profile-view container-fluid align-items-center"
+            >
+              <div className="profile-heading">Your Profile Details</div>
+              <br />
+              <br />
 
-                  <Form.Group controlId="formBasicUsername">
-                    <h4>Username: </h4>
-                    <Form.Label className="userInfo">
-                      {this.state.username}
-                    </Form.Label>
-                  </Form.Group>
-                  <br />
-                  <Form.Group controlId="formBasicEmail">
-                    <h4>Email:</h4>
-                    <Form.Label className="userInfo">
-                      {this.state.email}
-                    </Form.Label>
-                  </Form.Group>
-                  <br />
-                  <Form.Group controlId="formBasicDate">
-                    <h4>Date of Birth:</h4>
-                    <Form.Label className="userInfo">
-                      {this.state.dob}
-                    </Form.Label>
-                  </Form.Group>
-                  <br />
-                  <br />
+              <Form.Group controlId="formBasicUsername">
+                <h4>Username: </h4>
+                <Form.Label className="userInfo">
+                  {this.state.username}
+                </Form.Label>
+              </Form.Group>
+              <br />
+              <Form.Group controlId="formBasicEmail">
+                <h4>Email:</h4>
+                <Form.Label className="userInfo">{this.state.email}</Form.Label>
+              </Form.Group>
+              <br />
+              <Form.Group controlId="formBasicDate">
+                <h4>Date of Birth:</h4>
+                <Form.Label className="userInfo">{this.state.dob}</Form.Label>
+              </Form.Group>
+              <br />
+              <br />
 
-                  <Link to={`/update/${this.state.username}`}>
-                    <Button
-                      className="edit-button"
-                      variant="primary"
-                      type="link"
-                      size="sm"
-                    >
-                      Edit Your Profile
-                    </Button>
-                  </Link>
-                  <br />
-                  <br />
+              <Link to={`/update/${this.state.username}`}>
+                <Button
+                  className="edit-button"
+                  variant="primary"
+                  type="link"
+                  size="sm"
+                >
+                  Edit Your Profile
+                </Button>
+              </Link>
+              <br />
+              <br />
 
-                  <Link to={`/`}>
-                    <Button className="back-button" variant="success" size="sm">
-                      Back to All Movies
-                    </Button>
-                  </Link>
-                  <br />
-                  <br />
+              <Link to={`/`}>
+                <Button className="back-button" variant="success" size="sm">
+                  Back to All Movies
+                </Button>
+              </Link>
+              <br />
+              <br />
 
-                  <Button
-                    className="delete-button"
-                    variant="danger"
-                    size="sm"
-                    onClick={() => this.handleDelete()}
-                  >
-                    Delete Your Account
-                  </Button>
-                </Form>
-              </div>
-            </Col>
-
-            <Col>
-              <div
-                className="favoriteMovies"
-                style={{
-                  float: "right",
-                  textAlign: "center",
-                  width: "26rem",
-                }}
+              <Button
+                className="delete-button"
+                variant="danger"
+                size="sm"
+                onClick={() => this.handleDelete()}
               >
-                <h2 style={{ textAlign: "left", fontWeight: "600", paddingTop: "5rem" }}>
-                  Your Favorite Movies
-                </h2>
-                <br />
-                <br />
-                {favoriteMovieList.map((movie) => {
-                  return (
-                    <div className="fav-movie" key={movie._id}>
-                      <Card>
-                        <Card.Body>
-                          <Link to={`/movies/${movie._id}`}>
-                            <Card.Title>{movie.Title}</Card.Title>
-                          </Link>
-                        </Card.Body>
-                        <Button
-                        className="remove-fav"
-                        variant="warning"
-                        size="sm"
-                        onClick={() => this.removeFavorite(movie)}
-                      >
-                        Remove from Favorites
-                      </Button>
-                      </Card>
-                    </div>
-                  );
-                  <br />;
-                })}
-              </div>
+                Delete Your Account
+              </Button>
+              <br />
+              <br />
             </Col>
           </Row>
         </Container>
-      </div>
+
+        <h4 className="mt-4">
+            Your Favorite Movies
+          </h4>
+        <br />
+        <br />
+        <div className="d-flex row mt-0 ml-2">
+          {favoriteMovieList.map((movie) => {
+            return (
+              <div className="fav-movie" key={movie._id}>
+                <Card>
+                  <Card.Body>
+                    <Link to={`/movies/${movie._id}`}>
+                      <Card.Title>{movie.Title}</Card.Title>
+                    </Link>
+                  </Card.Body>
+                  <Button
+                    className="remove-fav"
+                    variant="warning"
+                    size="sm"
+                    onClick={() => this.removeFavorite(movie)}
+                  >
+                    Remove from Favorites
+                  </Button>
+                </Card>
+              </div>
+            );
+          })}
+        </div>
+      </Container>
     );
   }
 }
-
-ProfileView.propTypes = {
-  movies: PropTypes.array.isRequired,
-};

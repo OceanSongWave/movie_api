@@ -132,25 +132,31 @@
   font-weight: 500;
   width: 25rem;
 }
-.userProfile {
-  color: white;
-  font-weight: 500;
-  padding-top: 5rem;
-  padding-bottom: 3rem;
+.profile-view {
+  color: #016979;
+  position: static;
+  text-align: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 3.25rem;
 }
 
-.outterbox-left {
+.profile-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.outterbox {
   background: #d8d5cd;
-  opacity: 0.8;
+  opacity: 0.85;
   border: 2px solid #585441;
-  border-radius: 15px;
+  border-radius: 25px;
   display: flex;
-  max-width: 30rem;
+  max-width: 40rem;
+  padding-top: 5rem;
   text-align: center;
   justify-content: center;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  color: #016979;
 }
 
 .userInfo {
@@ -161,20 +167,28 @@
 
 .edit-button {
   width: 18rem;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 500;
 }
 
 .back-button {
   width: 18rem;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 500;
 }
 
 .delete-button {
   width: 18rem;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 500;
+}
+
+.mt-4 {
+  padding-top: 5rem;
+}
+
+.d-flex {
+  justify-content: center;
 }
 
 .fav-movie {
@@ -403,7 +417,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 10rem;
+  padding: 20rem;
   text-align: center;
 }
 

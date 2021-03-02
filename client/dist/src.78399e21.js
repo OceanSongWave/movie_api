@@ -53988,23 +53988,15 @@ var ProfileView = /*#__PURE__*/function (_React$Component) {
       }); // console.log(favoriteMovieList);
 
       if (!movies) alert("Please sign in");
-      return _react.default.createElement("div", {
-        className: "userProfile",
-        style: {
-          display: "flex"
-        }
-      }, _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, null, _react.default.createElement("div", {
-        className: "outterbox-left container-fluid"
-      }, _react.default.createElement(_reactBootstrap.Form, {
-        style: {
-          width: "26rem",
-          float: "left"
-        }
-      }, _react.default.createElement("h2", {
-        style: {
-          textAlign: "center",
-          fontWeight: "650"
-        }
+      return _react.default.createElement(_reactBootstrap.Container, {
+        className: "wrapper container-fluid"
+      }, _react.default.createElement(_reactBootstrap.Container, {
+        className: "outterbox container-fluid"
+      }, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
+        sm: "auto",
+        className: "profile-view container-fluid align-items-center"
+      }, _react.default.createElement("div", {
+        className: "profile-heading"
       }, "Your Profile Details"), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Group, {
         controlId: "formBasicUsername"
       }, _react.default.createElement("h4", null, "Username: "), _react.default.createElement(_reactBootstrap.Form.Label, {
@@ -54037,20 +54029,11 @@ var ProfileView = /*#__PURE__*/function (_React$Component) {
         onClick: function onClick() {
           return _this4.handleDelete();
         }
-      }, "Delete Your Account")))), _react.default.createElement(_reactBootstrap.Col, null, _react.default.createElement("div", {
-        className: "favoriteMovies",
-        style: {
-          float: "right",
-          textAlign: "center",
-          width: "26rem"
-        }
-      }, _react.default.createElement("h2", {
-        style: {
-          textAlign: "left",
-          fontWeight: "600",
-          paddingTop: "5rem"
-        }
-      }, "Your Favorite Movies"), _react.default.createElement("br", null), _react.default.createElement("br", null), favoriteMovieList.map(function (movie) {
+      }, "Delete Your Account"), _react.default.createElement("br", null), _react.default.createElement("br", null)))), _react.default.createElement("h4", {
+        className: "mt-4"
+      }, "Your Favorite Movies"), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("div", {
+        className: "d-flex row mt-0 ml-2"
+      }, favoriteMovieList.map(function (movie) {
         return _react.default.createElement("div", {
           className: "fav-movie",
           key: movie._id
@@ -54064,9 +54047,7 @@ var ProfileView = /*#__PURE__*/function (_React$Component) {
             return _this4.removeFavorite(movie);
           }
         }, "Remove from Favorites")));
-
-        _react.default.createElement("br", null);
-      }))))));
+      })));
     }
   }]);
 
@@ -54074,9 +54055,6 @@ var ProfileView = /*#__PURE__*/function (_React$Component) {
 }(_react.default.Component);
 
 exports.ProfileView = ProfileView;
-ProfileView.propTypes = {
-  movies: _propTypes.default.array.isRequired
-};
 },{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","axios":"../node_modules/axios/index.js","./profile-view.scss":"components/profile-view/profile-view.scss","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js"}],"components/update-view/update-view.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -55225,7 +55203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56794" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59383" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
